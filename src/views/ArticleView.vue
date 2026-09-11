@@ -213,7 +213,7 @@ onBeforeUnmount(() => {
               </div>
             </div>
 
-            <div class="data-table grammar-table">
+            <div v-if="section.grammar.length" class="data-table grammar-table">
               <div class="table-row table-head">
                 <span>语法</span><span>接续</span><span>含义与本段用法</span>
               </div>

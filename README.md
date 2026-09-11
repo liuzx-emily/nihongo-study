@@ -118,6 +118,7 @@ npm run preview
 项目规范按目录生效：
 
 - `AGENTS.md`：请求分类、电脑端限制、应用与学习工作流
+- `LEARNING_PROFILE.md`：跨文章生效的已掌握语法家族与筛选规则
 - `src/AGENTS.md`：前端代码组织和实现质量
 - `src/content/AGENTS.md`：学习档案内容与数据规则
 

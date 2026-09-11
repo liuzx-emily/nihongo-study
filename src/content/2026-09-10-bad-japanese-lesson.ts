@@ -54,7 +54,6 @@ YUYU：我们当然希望学生下课后笑着说“今天也很开心”，然�
       ],
       grammar: [
         { pattern: '～のか～のか分からない', connection: '普通形＋のか＋普通形＋のか分からない', meaning: '不知道是……还是……', example: '疲れているのか、興味がないのか分からない。' },
-        { pattern: '～ようになる', connection: '动词辞书形＋ようになる', meaning: '变得开始……', example: '焦って、先生のほうがもっと話すようになる。' },
         { pattern: '～というか', connection: '普通形／名词＋というか', meaning: '或者说……；该怎么说呢……', example: '「口を閉じるというか」是在寻找更贴切的描述。' },
       ],
       keySentences: [
@@ -161,7 +160,6 @@ YUYU：是啊。参加日语课并不代表每次都必然得到100分的课堂�
       grammar: [
         { pattern: '～ようがない', connection: '动词意向形＋がない', meaning: '无法……、无从……', example: '内容が分からなければ、準備しようがない。' },
         { pattern: '～わけではない', connection: '普通形＋わけではない', meaning: '并非……', example: 'いつも100点のレッスンを受けられるわけではない。' },
-        { pattern: '～にもよる', connection: '名词＋にもよる', meaning: '也取决于……', example: '授業の質は学生の参加の仕方にもよる。' },
       ],
       keySentences: [
         {
@@ -211,8 +209,6 @@ YUYU：确实。老师看不见这个人心中的“100分”是什么。如果�
         { term: '予習', reading: 'よしゅう', meaning: '预习', note: '原转写误作「復讐」，结合语境修正。' },
       ],
       grammar: [
-        { pattern: '～ておく', connection: '动词て形＋おく', meaning: '事先做好……', example: '勉強したいことを調べて伝えておく。' },
-        { pattern: '～んじゃないかな', connection: '普通形＋んじゃないかな', meaning: '我想大概是……吧', example: '学生には目から鱗なんじゃないかな。' },
       ],
       keySentences: [
         {
@@ -258,7 +254,6 @@ YUYU：能够说明与能让对方理解完全不同。所以还是要提前准�
       ],
       grammar: [
         { pattern: '～わけではなくて', connection: '普通形＋わけではなくて', meaning: '并不是……，而是……', example: '全くゼロから勉強するわけではない。' },
-        { pattern: '～てもらえる', connection: '动词て形＋もらえる', meaning: '能让对方为自己……', example: '次のクラスで説明してもらえるとうれしい。' },
       ],
       keySentences: [
         {
@@ -306,8 +301,6 @@ YUYU：如果始终只有“嗯嗯，原来如此”，老师会有点寂寞，�
         { term: '心配事', reading: 'しんぱいごと', meaning: '令人担心的事', note: '回应单一会让教师产生越来越多猜测。' },
       ],
       grammar: [
-        { pattern: '～てもらいたいと思ったら', connection: '动词て形＋もらいたい＋と思ったら', meaning: '如果希望别人为自己……', example: '楽しく教えてもらいたいと思ったら、反応が大事だ。' },
-        { pattern: '～ばかり増えていく', connection: '名词＋ばかり＋动词て形＋いく', meaning: '只会不断增加……', example: '反応がないと、心配事ばかり増えていく。' },
       ],
       keySentences: [
         {
@@ -347,7 +340,6 @@ YUYU：我在别的播客里也谈过。小组课开始时，老师问“大家�
         { term: 'つながる', meaning: '带来、促成', note: '「いいレッスンにつながる」表示成为好课的条件。' },
       ],
       grammar: [
-        { pattern: '～たのに', connection: '动词た形＋のに', meaning: '明明……却……', example: 'ボールを投げたのに、返ってこない。' },
         { pattern: '～必要はない', connection: '动词辞书形＋必要はない', meaning: '没有必要……', example: '先生と友達になる必要はない。' },
       ],
       keySentences: [
@@ -417,8 +409,6 @@ YUYU：谢谢。大家下次见。
         { term: '周りの目が気になる', reading: 'まわりのめがきになる', meaning: '在意周围人的眼光', note: '在公园公开录音时难以完全专注。' },
       ],
       grammar: [
-        { pattern: '～ようになる', connection: '动词辞书形＋ようになる', meaning: '从此变得会……', example: '明日からみんな「そうですか」と言うようになる。' },
-        { pattern: '～てもらえるように', connection: '动词て形＋もらえるように', meaning: '为了能得到别人……', example: 'チャンネルに呼んでもらえるように頑張る。' },
         { pattern: '～たら逆に', connection: '动词た形＋ら＋逆に', meaning: '如果过度……反而……', example: '全員が同時に反応したら、逆に怖い。' },
       ],
       keySentences: [

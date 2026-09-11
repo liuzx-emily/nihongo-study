@@ -28,8 +28,6 @@ const article: StudyArticle = {
         { term: '返せるコメントには返す', meaning: '能回复的评论就回复', note: '助词「には」划出可处理的范围，也暗示并非每条都能回复。' },
       ],
       grammar: [
-        { pattern: '～ておく', connection: '动词て形＋おく', meaning: '预先或暂且做某事', example: '「とりあえず返信はしておきました」表示先把回复这件事做了。' },
-        { pattern: '～てもらいたい', connection: '动词て形＋もらいたい', meaning: '希望某人为自己或出于自己的愿望做……', example: '父に思いっきり楽しんでもらいたい。' },
       ],
       keySentences: [
         {
@@ -68,7 +66,6 @@ const article: StudyArticle = {
       ],
       grammar: [
         { pattern: '～となったとき', connection: '普通形＋となったとき', meaning: '到了必须……的情形时', example: '自分で練習しなきゃいけないとなったとき、順番が大切だ。' },
-        { pattern: '～のに', connection: '普通形＋のに', meaning: '明明……却……', example: 'ミスが多いのに、すごく上手に聞こえる。' },
       ],
       keySentences: [
         {
@@ -105,7 +102,6 @@ const article: StudyArticle = {
         { term: '母語', reading: 'ぼご', meaning: '母语', note: '原转写多次误成「母」。' },
       ],
       grammar: [
-        { pattern: '～たほうがいい', connection: '动词た形＋ほうがいい', meaning: '最好……', example: '読む練習と話す練習は分けたほうがいい。' },
         { pattern: '～とする', connection: '普通形＋とする', meaning: '假设……', example: 'お腹が出ているとします。' },
       ],
       keySentences: [
@@ -179,8 +175,6 @@ const article: StudyArticle = {
         { term: '音が出る', reading: 'おとがでる', meaning: '成功发出目标音', note: '这里不是单纯“发出声音”，而是发音动作到位。' },
       ],
       grammar: [
-        { pattern: '～ようになる', connection: '动词辞书形／ない形＋ようになる', meaning: '逐渐达到能够……的状态', example: '正しい発音を聞き分けられるようになる。' },
-        { pattern: '～てもらう', connection: '动词て形＋もらう', meaning: '请别人为自己做……并受益', example: '友達に発音してもらう。' },
       ],
       keySentences: [
         {
@@ -217,8 +211,6 @@ l の音を言いたいときでも、わざと別の音で言ってみる。そ
         { term: '往復する', reading: 'おうふくする', meaning: '往返、来回切换', note: '这里指在两个发音动作间反复比较。' },
       ],
       grammar: [
-        { pattern: '～てみる', connection: '动词て形＋みる', meaning: '尝试做……', example: 'わざと違う音で言ってみる。' },
-        { pattern: '～てくる', connection: '动词て形＋くる', meaning: '变化逐渐发展到当前', example: '口の動かし方が分かってくる。' },
       ],
       keySentences: [
         {
@@ -255,7 +247,6 @@ l の音を言いたいときでも、わざと別の音で言ってみる。そ
         { term: 'セットで覚える', meaning: '作为一组记忆', note: '这里指把词与助词、上下文一起听记。' },
       ],
       grammar: [
-        { pattern: '～によって', connection: '名词＋によって', meaning: '根据……而不同；由于……', example: '地域によってアクセントが変わる。' },
         { pattern: 'なぜかというと～からだ', connection: 'なぜかというと＋理由＋からだ', meaning: '要问为什么，是因为……', example: '勉強しなくても話せる。なぜかというと、たくさん聞いているからです。' },
       ],
       keySentences: [
@@ -293,7 +284,6 @@ l の音を言いたいときでも、わざと別の音で言ってみる。そ
       ],
       grammar: [
         { pattern: '～まま', connection: '名词の／な形容词な／动词た形・ない形＋まま', meaning: '保持某状态不变', example: '違いが曖昧なまま覚えてしまう。' },
-        { pattern: '～ようになる', connection: '动词辞书形＋ようになる', meaning: '经过变化后变得能……', example: '音の長さを意識できるようになる。' },
       ],
       keySentences: [
         {
@@ -331,7 +321,6 @@ l の音を言いたいときでも、わざと別の音で言ってみる。そ
         { term: 'まとまり', meaning: '语块、意义单位', note: '自然语流并非逐个助词等强读出，而是按语块组织。' },
       ],
       grammar: [
-        { pattern: '～かどうか', connection: '普通形＋かどうか', meaning: '是否……', example: '波を意識して話せるかどうかが大事です。' },
         { pattern: '～てほしくない', connection: '动词て形＋ほしくない', meaning: '不希望对方做……', example: '助詞を間違えてほしくない。' },
       ],
       keySentences: [
@@ -369,7 +358,6 @@ l の音を言いたいときでも、わざと別の音で言ってみる。そ
         { term: '再現する', reading: 'さいげんする', meaning: '再现', note: '把听到的声音模式用自己的口重新表达。' },
       ],
       grammar: [
-        { pattern: '～なくてもいい', connection: '动词ない形去い＋くてもいい', meaning: '不……也可以', example: '全部の言葉が分からなくてもいい。' },
         { pattern: '～でないと', connection: '名词／な形容词＋でないと', meaning: '如果不是……就无法……', example: '聞きながらでないと、リズムを再現できない。' },
       ],
       keySentences: [
@@ -412,7 +400,6 @@ l の音を言いたいときでも、わざと別の音で言ってみる。そ
       ],
       grammar: [
         { pattern: '～ような感じで', connection: '普通形＋ような感じで', meaning: '以仿佛……那样的感觉', example: '歌を歌うような感じで、日本人の話し方をまねする。' },
-        { pattern: '～てくれたらうれしい', connection: '动词て形＋くれたらうれしい', meaning: '如果你愿意为我做……我会很高兴', example: '友達に紹介してくれたらうれしいです。' },
       ],
       keySentences: [
         {

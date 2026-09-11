@@ -22,9 +22,6 @@ const article: StudyArticle = {
         { term: 'せっかく', meaning: '好不容易、难得', note: '带有不愿浪费既有努力或难得机会的语气。' },
       ],
       grammar: [
-        { pattern: '～んですけど（も）', connection: '普通形＋んですけど', meaning: '说明背景、铺垫下文', example: '「本題なんですけども」中的「けど」不一定表示转折，也可让语气更柔和。' },
-        { pattern: '～ちゃう', connection: '～てしまう → ～ちゃう', meaning: '不小心……；结果……', example: '「入っちゃって」表示意外混入了不想要的环境声。' },
-        { pattern: '～てもらいたい', connection: '动词て形＋もらいたい', meaning: '希望别人为自己做……', example: '「皆さんに聞いてもらいたい」即“希望大家来听”。' },
       ],
       keySentences: [
         {
@@ -55,8 +52,6 @@ const article: StudyArticle = {
       ],
       grammar: [
         { pattern: '～というか', connection: '普通形／名词＋というか', meaning: '或者说……；该怎么说呢……', example: '「充実感というか、達成感というか」表现说话人正在寻找更准确的词。' },
-        { pattern: '～ていく', connection: '动词て形＋いく', meaning: '从现在起逐渐发展', example: '「習慣になっていく」强调逐渐形成习惯的过程。' },
-        { pattern: '～のかな', connection: '普通形＋のかな', meaning: '我想是不是……', example: '「成長できるのかな」让判断显得柔和。' },
       ],
       keySentences: [
         {
@@ -86,8 +81,6 @@ const article: StudyArticle = {
       ],
       grammar: [
         { pattern: '～とかってありますか', connection: '名词＋とかってありますか', meaning: '有没有诸如……之类的东西', example: '比直接问「ありますか」更柔和，也带有边想边问的感觉。' },
-        { pattern: '～より', connection: 'AよりB', meaning: '与其A，不如B', example: '比较“全部使用难句”和“以可理解内容为主”两种做法。' },
-        { pattern: '～ばかり', connection: '名词＋ばかり', meaning: '净是……、总是……', example: '「フレーズばかり使う」表示使用的几乎全是难句。' },
       ],
       keySentences: [
         {
@@ -138,9 +131,6 @@ YUYU：从形象上来说，就像在楼梯上走一走：上去，再下来，�
       ],
       grammar: [
         { pattern: '～だろうな', connection: '普通形＋だろうな', meaning: '大概……吧、应该……吧', example: '「これは知ってるだろうな」是教师依据经验作出的推测，而非确定事实。' },
-        { pattern: '～ばっかり', connection: '名词／动词て形＋ばっかり', meaning: '净是……、几乎一直……', example: '「会話のレッスンばっかり」是「ばかり」的口语形式，表示课程几乎都是会话课。' },
-        { pattern: '～による', connection: '名词＋による', meaning: '取决于……；依据……', example: '「今までの経験による」表示这种判断主要来自过往经验。' },
-        { pattern: '～ながら', connection: '动词ます形去ます＋ながら', meaning: '一边……一边……', example: '「話しながら見つける」表示判断与对话同步进行。' },
       ],
       keySentences: [
         {
@@ -195,10 +185,8 @@ YUYU：是啊，我非常理解这种感受。`,
         { term: '『げんき』', meaning: '《GENKI》日语教材', note: '面向初级日语学习者、在英语圈广泛使用的系列教材。' },
       ],
       grammar: [
-        { pattern: '～ようになる', connection: '动词辞书形／ない形＋ようになる', meaning: '变得能够……；逐渐形成……', example: '「できるようになった」关注从不会到会的能力变化。' },
         { pattern: 'なんなら～も', connection: 'なんなら＋强调内容', meaning: '甚至……；说得更进一步……', example: '「なんなら、『げんき』の教科書を見たこともなかった」追加了程度更强的事实。' },
         { pattern: '～まくる', connection: '动词ます形去ます＋まくる', meaning: '不停地……、大量地……', example: '「教科書を読みまくる」强调大量阅读教材。多用于口语。' },
-        { pattern: '～ながらやる', connection: '动词ます形去ます＋ながら', meaning: '一边……一边做', example: '「勉強しながらやっていた」表示并非学完才教，而是在实践教学的同时学习。' },
       ],
       keySentences: [
         {
@@ -280,7 +268,6 @@ YUYU：这就像毫无背景知识地看电影，与先买电影手册、读完�
         { pattern: '～つつ', connection: '动词ます形去ます＋つつ', meaning: '一边……一边……', example: '「ラインを見極めつつ」比「見極めながら」略正式，表示判断能力的同时选择话题。' },
         { pattern: '～であろう', connection: '普通形＋であろう／名词＋であろう', meaning: '大概……、很可能……', example: '「話したいであろう」「興味があるであろう」是教师根据线索所作的推测。' },
         { pattern: '～っていうのを知って', connection: '引用内容＋っていうの＋を', meaning: '知道……这件事之后', example: '这里把「ここまで実は考えてるんだぞ」整句话名词化，作为「知る」的宾语。' },
-        { pattern: '～てから', connection: '动词て形＋から', meaning: '做完……之后再……', example: '译文补明了「パンフレットを読んでから見る」所表达的先后关系。' },
       ],
       keySentences: [
         {
@@ -346,10 +333,7 @@ YUYU：如果能让学习者建立这种心态，我想他们到了日本也能�
         { term: 'とにかく', meaning: '总之；不管怎样先……', note: '表示暂且不谈其他方法，首先坚持营造轻松气氛。' },
       ],
       grammar: [
-        { pattern: '～ても大丈夫', connection: '动词て形＋も大丈夫', meaning: '即使……也没关系', example: '「失敗しても大丈夫だ」强调失败不会带来严重后果。' },
-        { pattern: '～てもらいたい', connection: '动词て形＋もらいたい', meaning: '希望别人做……／进入某种状态', example: '「自信を持ってもらいたい」是教师希望学生建立自信。' },
         { pattern: '～たらどうしよう', connection: '动词た形＋らどうしよう', meaning: '如果……了怎么办', example: '「失敗したらどうしよう」表现尚未行动前的焦虑。' },
-        { pattern: '～ようにする', connection: '动词辞书形／ない形＋ようにする', meaning: '有意识地尽量做到……', example: '「よく笑うようにしてます」是裕介平时刻意维持的做法。' },
       ],
       keySentences: [
         {
@@ -435,8 +419,6 @@ YUYU：没错。“我不是在遭人嘲笑，而是在让别人笑。”就是�
         { term: '人気者', reading: 'にんきもの', meaning: '受欢迎的人、红人', note: '用夸张幽默的方式重新解释犯错后的处境。' },
       ],
       grammar: [
-        { pattern: '～ようにしている', connection: '动词辞书形／ない形＋ようにしている', meaning: '平时有意识地坚持……', example: '「受け止めて笑うようにしてる」表示裕介把这种回应当作课堂习惯。' },
-        { pattern: '～なきゃいけない', connection: '动词ない形去ない＋なきゃいけない', meaning: '必须……', example: '「言わなきゃいけない」是「言わなければいけない」的口语缩略。' },
         { pattern: '～のかい', connection: '普通形＋のかい', meaning: '是……吗／竟然……啊', example: '「終わらないのかい！」在这里是带表演感的吐槽。' },
         { pattern: '～んじゃない？', connection: '普通形＋んじゃない', meaning: '是不是……／或许……吧', example: '「俺、ユーモアあるんじゃない？」是略带玩笑的自我评价。' },
       ],
@@ -492,10 +474,6 @@ YUYU：是啊。所以，这个比喻是否恰当我也不确定，但感觉就�
         { term: '雰囲気', reading: 'ふんいき', meaning: '气氛、氛围', note: '标准读音为「ふんいき」，不是口语中偶尔听到的「ふいんき」。' },
       ],
       grammar: [
-        { pattern: '～によって（は）', connection: '名词＋によって（は）', meaning: '根据……不同；因……而异', example: '「国によっては」强调并非所有国家或学习者都相同。' },
-        { pattern: '～なきゃいけない', connection: '动词ない形去ない＋なきゃいけない', meaning: '必须……', example: '「気をつけなきゃいけない」是「気をつけなければいけない」的口语形式。' },
-        { pattern: '～たりする', connection: '动词た形＋りする', meaning: '有时会……；也有……的情况', example: '「思ったりする」「トピックもあったりする」都避免把判断说得过于绝对。' },
-        { pattern: '～かどうかは分からない', connection: '普通形＋かどうかは分からない', meaning: '不知道是否……', example: '「いい例えかどうかは分からない」是提出大胆比喻前的自我保留。' },
       ],
       keySentences: [
         {
@@ -562,9 +540,6 @@ YUYU：想运动的人聚集在那里。好的器材已经准备齐全，但真�
       ],
       grammar: [
         { pattern: '～というふうに', connection: '普通形＋というふうに', meaning: '以……这种方式；认为……', example: '「いいクラスだというふうに感じる」比直接断言更柔和。' },
-        { pattern: '～でもいい', connection: '名词＋でもいい', meaning: '即使是……也可以', example: '「二人でもいい」强调社群并不一定需要很多人。' },
-        { pattern: '～ように', connection: '动词辞书形／ない形＋ように', meaning: '为了能够……', example: '「続けられるように」表示结交伙伴的目的是更容易长期坚持。' },
-        { pattern: '～てくれれば', connection: '动词て形＋くれれば', meaning: '如果能为我／如我所愿地……', example: '「そうなってくれれば」包含说话人期待学生达到理想状态的心情。' },
       ],
       keySentences: [
         {
@@ -625,10 +600,6 @@ YUYU：我也这样认为。`,
         { term: 'ワクワクする', meaning: '兴奋、充满期待', note: '表示面对即将发生的愉快事情时积极而跃跃欲试的心情。' },
       ],
       grammar: [
-        { pattern: '～かどうか', connection: '普通形＋かどうか', meaning: '是否……', example: '「環境が作れるかどうか」把能否营造环境作为评价课堂的关键。' },
-        { pattern: '～なくてもいい', connection: '动词ない形去ない＋なくてもいい', meaning: '不……也可以', example: '「頑張らなくてもいい」不是鼓励偷懒，而是不依赖痛苦的意志硬撑。' },
-        { pattern: '～ていく', connection: '动词て形＋いく', meaning: '逐渐……下去', example: '「上手になっていく」描写能力随时间持续提高。' },
-        { pattern: '～のかな', connection: '普通形＋のかな', meaning: '是不是……呢', example: '「感情がないのかな」是说话人试探性地概括共同观点。' },
       ],
       keySentences: [
         {
@@ -694,7 +665,6 @@ YUYU：是啊。所以小时候的裕介大概是因为想得到更多夸奖、�
       grammar: [
         { pattern: 'こと～に関しては', connection: 'こと＋名词＋に関しては', meaning: '尤其谈到……／至少就……而言', example: '「こと言語に関しては」强调接下来的判断只针对语言，不一定适用于所有学习。' },
         { pattern: '～たかなって思うと', connection: '动词た形＋かな＋と思うと', meaning: '回想自己是否曾经……', example: '「つらい思いをしたかなって思うと」通过自问引出“其实没有”的结论。' },
-        { pattern: '～てくれる', connection: '动词て形＋くれる', meaning: '别人为自己做……', example: '「喜んでくれる」「盛り上がってくれる」带有说话人从中得到积极感受的视角。' },
         { pattern: '～のではなく', connection: '普通形＋のではなく', meaning: '不是……而是……', example: '否定把努力本身当作目的，转向以积极感受推动学习。' },
       ],
       keySentences: [
@@ -786,7 +756,6 @@ YUYU：是的。`,
       grammar: [
         { pattern: '～させてください', connection: '动词使役形て形＋ください', meaning: '请允许我……', example: '「日本語を話させてください」表示学习者主动请求获得说话机会。' },
         { pattern: '～と思われるような', connection: '引用内容＋と思われるような＋名词', meaning: '成为让别人觉得……的……', example: '「話したいと思われるような人間」从他人的评价视角描述理想教师。' },
-        { pattern: '～でいなきゃいけない', connection: '名词／ナ形容词＋でいなきゃいけない', meaning: '必须保持……的状态', example: '「人間ではいなきゃいけない」是「人間でいなければいけない」的口语形式。' },
         { pattern: '～ないと', connection: '动词ない形／名词＋じゃないと', meaning: '如果不……的话', example: '「よっぽどの物好きじゃないと」后面省略「話しかけない」，由语境补出。' },
       ],
       keySentences: [
