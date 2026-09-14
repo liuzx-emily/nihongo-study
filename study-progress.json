@@ -33,6 +33,41 @@
       ],
       "startedOn": "2026-09-11",
       "completedOn": "2026-09-11"
+    },
+    "2026-09-10-japanese-pronunciation": {
+      "completedSectionIds": [
+        "section-1",
+        "section-2",
+        "section-3",
+        "section-4",
+        "section-5",
+        "section-6",
+        "section-7",
+        "section-8",
+        "section-9",
+        "section-10",
+        "section-11"
+      ],
+      "startedOn": "2026-09-14",
+      "completedOn": "2026-09-14"
+    },
+    "2026-09-14-oda-nobunaga-hieizan": {
+      "completedSectionIds": [
+        "section-1",
+        "section-2",
+        "section-3",
+        "section-4",
+        "section-5",
+        "section-6",
+        "section-7",
+        "section-8",
+        "section-9",
+        "section-10",
+        "section-11",
+        "section-12"
+      ],
+      "startedOn": "2026-09-14",
+      "completedOn": "2026-09-14"
     }
   }
 }
