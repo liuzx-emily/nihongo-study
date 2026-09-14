@@ -12,6 +12,7 @@
   --red: #876448;
   --danger: #b33b2e;
   --green: #6e7663;
+  --learning: #b57235;
   --line: #d2ccc2;
   --line-strong: rgba(29, 38, 40, 0.34);
   --control: #e5dccf;
@@ -42,17 +43,18 @@ button, input { font: inherit; }
 .article-summary-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; color: var(--muted); font-size: 12px; }
 .meta-item { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .meta-label { color: #858681; letter-spacing: .06em; }
-.progress-status { color: inherit; font-weight: 600; }
+.progress-status { color: inherit; font-weight: 400; }
 .status-dot { width: 7px; height: 7px; border: 1px solid #858681; border-radius: 50%; transform: translateY(1px); }
-.progress-status-学习中 .status-dot { border-color: var(--red); background: var(--red); }
-.progress-status-已学 .status-dot { border-color: var(--green); background: var(--green); }
+.progress-status-学习中 .status-dot { border-color: var(--learning); background: var(--learning); }
+.progress-status-已学 .status-dot { border-color: #acafab; background: #acafab; }
 .article-summary-description { max-width: 900px; line-height: 1.6; }
 .archive-card .article-summary-title { font: 600 24px var(--serif); margin: 0 0 6px; }
 .archive-card .article-summary-description { margin: 0; color: #6e6a63; font-size: 12px; }
 .archive-card .article-summary-meta { display: grid; grid-template-columns: 116px 150px minmax(0, 1fr); gap: 0 18px; margin-top: 9px; }
 .archive-card .meta-label { color: #817d74; }
 .archive-card .status-dot { border-color: #817d74; }
-.archive-card .progress-status-已学 .status-dot { border-color: #7b8179; background: #7b8179; }
+.archive-card .progress-status-学习中 .status-dot { border-color: var(--learning); background: var(--learning); }
+.archive-card .progress-status-已学 .status-dot { border-color: #acafab; background: #acafab; }
 .archive-card .progress-status { grid-column: 1; }
 .archive-card .progress-date { grid-column: 2; }
 .card-action { align-self: center; color: var(--muted); font-size: 12px; letter-spacing: .14em; }
@@ -90,12 +92,13 @@ button, input { font: inherit; }
 .toc-progress-icon { display: none; align-self: center; width: 16px; height: 16px; fill: none; stroke: var(--green); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .toc a.completed .toc-progress-icon { display: block; }
 .toc a.active { color: var(--ink); border-bottom-color: var(--line); }
-.study-section { scroll-margin-top: 20px; padding-bottom: 48px; }
+.study-section { scroll-margin-top: 20px; padding-bottom: 30px; }
 .study-section + .study-section { padding-top: 36px; border-top: 1px solid var(--line); }
 .study-section-header { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-bottom: 16px; }
 .study-section-header > div:first-child > span { color: var(--red); font-size: 12px; letter-spacing: .2em; }
 .study-section-header h2 { font: 600 28px var(--serif); margin: 5px 0; }
-.section-progress-control { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; color: #777875; font-size: 12px; font-weight: 600; }
+.section-progress-footer { display: flex; justify-content: flex-end; margin-top: 25px; }
+.section-progress-control { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; color: #777875; font-size: 12px; font-weight: 400; }
 .section-progress-control.completed { color: var(--green); }
 .section-progress-control button { display: grid; width: 34px; height: 34px; padding: 0; place-items: center; border: 1px solid transparent; background: var(--control); color: #686b67; cursor: pointer; }
 .section-progress-control button:hover { background: var(--control-hover); color: var(--ink); }

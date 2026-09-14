@@ -173,25 +173,6 @@ onBeforeUnmount(() => {
               <span>SECTION {{ String(sectionIndex + 1).padStart(2, '0') }}</span>
               <h2 lang="ja">{{ section.title }}</h2>
             </div>
-            <div
-              v-if="progressEditable"
-              class="section-progress-control"
-              :class="{ completed: isSectionCompleted(article, section.id) }"
-            >
-              <span>{{ isSectionCompleted(article, section.id) ? '已学' : '未学' }}</span>
-              <button
-                type="button"
-                :disabled="isArticleSaving(article.slug) || !progressLoaded"
-                :aria-label="isSectionCompleted(article, section.id) ? `将${section.title}设为未学` : `将${section.title}标记为已学`"
-                :title="isSectionCompleted(article, section.id) ? '设为未学' : '标记为已学'"
-                @click="toggleSectionProgress(article, section.id)"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9" />
-                  <path v-if="isSectionCompleted(article, section.id)" d="m8 12 3 3 6-7" />
-                </svg>
-              </button>
-            </div>
           </header>
 
           <ParallelReading :japanese="section.japanese" :translation="section.translation" />
@@ -246,6 +227,27 @@ onBeforeUnmount(() => {
               </div>
             </article>
           </section>
+
+          <footer v-if="progressEditable" class="section-progress-footer">
+            <div
+              class="section-progress-control"
+              :class="{ completed: isSectionCompleted(article, section.id) }"
+            >
+              <span>{{ isSectionCompleted(article, section.id) ? '已学' : '未学' }}</span>
+              <button
+                type="button"
+                :disabled="isArticleSaving(article.slug) || !progressLoaded"
+                :aria-label="isSectionCompleted(article, section.id) ? `将${section.title}设为未学` : `将${section.title}标记为已学`"
+                :title="isSectionCompleted(article, section.id) ? '设为未学' : '标记为已学'"
+                @click="toggleSectionProgress(article, section.id)"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path v-if="isSectionCompleted(article, section.id)" d="m8 12 3 3 6-7" />
+                </svg>
+              </button>
+            </div>
+          </footer>
         </section>
       </article>
     </div>
