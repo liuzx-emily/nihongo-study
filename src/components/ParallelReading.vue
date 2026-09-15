@@ -7,7 +7,11 @@ const props = defineProps<{
 }>()
 
 function splitParagraphs(text: string) {
-  return text.trim().split(/\r?\n\s*\r?\n/)
+  return text
+    .trim()
+    .split(/\r?\n(?:[ \t]*\r?\n)*/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean)
 }
 
 const paragraphPairs = computed(() => {
