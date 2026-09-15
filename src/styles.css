@@ -141,12 +141,12 @@ button, input { font: inherit; }
 .content-delete-button { display: grid; width: 17px; min-width: 17px; height: 17px; padding: 0; place-items: center; border: 1px solid transparent; background: transparent; color: var(--danger); cursor: pointer; font-size: 12px; white-space: nowrap; }
 .content-delete-button:hover { background: rgba(179,59,46,.08); }
 .content-delete-button.confirming { width: auto; min-width: 64px; height: 28px; padding: 0 7px; background: var(--danger); color: #fff; }
-.content-delete-button svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.content-delete-button svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .content-delete-button:disabled { cursor: not-allowed; opacity: .55; }
 .content-delete-button:focus-visible { outline: 2px solid var(--danger); outline-offset: 2px; }
-.table-delete-button { position: absolute; right: 7px; top: 50%; z-index: 1; transform: translateY(-50%); }
+.table-delete-button { position: absolute; right: 20px; top: 50%; z-index: 1; transform: translateY(-50%); }
 .sentence-card { position: relative; padding: 16px 18px; margin-bottom: 12px; background: rgba(255,255,255,.28); border: 1px solid var(--line); }
-.sentence-card-actions { position: absolute; right: 14px; top: 10px; display: flex; align-items: center; gap: 10px; }
+.sentence-card-actions { position: absolute; right: 20px; top: 23px; display: flex; align-items: center; gap: 10px; }
 .sentence-card blockquote { max-width: 900px; margin: 0; padding-right: 30px; font: 600 18px/1.7 var(--serif); }
 .sentence-card.editable blockquote { padding-right: 110px; }
 .sentence-translation { margin: 5px 0; color: #735e4d; line-height: 1.65; font-size: 14px; }

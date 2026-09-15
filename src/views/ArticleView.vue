@@ -225,14 +225,14 @@ onBeforeUnmount(() => {
 
           <ParallelReading :japanese="section.japanese" :translation="section.translation" />
 
-          <section class="learning-panel">
+          <section v-if="section.vocabulary.length || section.grammar.length" class="learning-panel">
             <header class="panel-heading">
               <span>03</span>
               <h3>困难单词和语法</h3>
             </header>
 
             <p v-if="showsContentError(section.id, ['vocabulary', 'grammar'])" class="content-delete-error" role="alert">{{ contentError }}</p>
-            <div class="data-table vocabulary-table">
+            <div v-if="section.vocabulary.length" class="data-table vocabulary-table">
               <div class="table-row table-head">
                 <span>单词 / 读音</span><span>中文意思</span><span>语境说明</span>
               </div>
