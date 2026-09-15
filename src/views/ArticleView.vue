@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getArticle } from '../content'
 import ParallelReading from '../components/ParallelReading.vue'
@@ -15,6 +15,15 @@ import {
   toggleAllSections,
   toggleSectionProgress,
 } from '../studyProgress'
+import {
+  contentDeleting,
+  contentEditable,
+  contentError,
+  contentErrorKind,
+  contentErrorSectionId,
+  deleteContentItem,
+} from '../vocabularyEditing'
+import type { DeletableContentItem, DeletableContentKind } from '../vocabularyEditing'
 
 const route = useRoute()
 const article = computed(() => getArticle(String(route.params.slug)))
@@ -24,6 +33,11 @@ const showBackToTop = ref(false)
 const activeSection = ref('')
 const confirmingBulkAction = ref(false)
 const bulkButton = ref<HTMLButtonElement>()
+const confirmingDeletion = shallowRef<{
+  kind: DeletableContentKind
+  sectionId: string
+  item: DeletableContentItem
+}>()
 
 function updateReadingState() {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight
@@ -43,6 +57,7 @@ function scrollToTop() {
 
 async function initializeArticle() {
   confirmingBulkAction.value = false
+  confirmingDeletion.value = undefined
   try {
     await loadStudyProgress()
   } catch {
@@ -73,14 +88,47 @@ async function handleBulkAction() {
   await toggleAllSections(article.value)
 }
 
+function isConfirmingDeletion(kind: DeletableContentKind, sectionId: string, item: DeletableContentItem) {
+  return confirmingDeletion.value?.kind === kind
+    && confirmingDeletion.value.sectionId === sectionId
+    && confirmingDeletion.value.item === item
+}
+
+async function handleContentDelete(kind: DeletableContentKind, sectionId: string, item: DeletableContentItem) {
+  if (!article.value || contentDeleting.value) return
+  if (!isConfirmingDeletion(kind, sectionId, item)) {
+    confirmingDeletion.value = { kind, sectionId, item }
+    return
+  }
+  confirmingDeletion.value = undefined
+  if (!await deleteContentItem(article.value, sectionId, kind, item)) return
+  const section = article.value.sections.find((candidate) => candidate.id === sectionId)
+  const items = section?.[kind] as DeletableContentItem[] | undefined
+  const index = items?.indexOf(item) ?? -1
+  if (items && index >= 0) items.splice(index, 1)
+}
+
+function showsContentError(sectionId: string, kinds: DeletableContentKind[]) {
+  return contentError.value
+    && contentErrorSectionId.value === sectionId
+    && contentErrorKind.value !== undefined
+    && kinds.includes(contentErrorKind.value)
+}
+
 function cancelBulkConfirmation(event: MouseEvent) {
   if (confirmingBulkAction.value && !bulkButton.value?.contains(event.target as Node)) {
     confirmingBulkAction.value = false
   }
+  if (confirmingDeletion.value && !(event.target as Element).closest?.('.content-delete-button.confirming')) {
+    confirmingDeletion.value = undefined
+  }
 }
 
 function handleEscape(event: KeyboardEvent) {
-  if (event.key === 'Escape') confirmingBulkAction.value = false
+  if (event.key === 'Escape') {
+    confirmingBulkAction.value = false
+    confirmingDeletion.value = undefined
+  }
 }
 
 onMounted(() => {
@@ -183,14 +231,30 @@ onBeforeUnmount(() => {
               <h3>困难单词和语法</h3>
             </header>
 
+            <p v-if="showsContentError(section.id, ['vocabulary', 'grammar'])" class="content-delete-error" role="alert">{{ contentError }}</p>
             <div class="data-table vocabulary-table">
               <div class="table-row table-head">
                 <span>单词 / 读音</span><span>中文意思</span><span>语境说明</span>
               </div>
-              <div v-for="item in section.vocabulary" :key="item.term" class="table-row">
+              <div v-for="(item, itemIndex) in section.vocabulary" :key="`${item.term}-${itemIndex}`" class="table-row" :class="{ editable: contentEditable }">
                 <span class="term-cell"><b lang="ja">{{ item.term }}</b><small v-if="item.reading">{{ item.reading }}</small></span>
                 <span>{{ item.meaning }}</span>
                 <span>{{ item.note }}</span>
+                <button
+                  v-if="contentEditable"
+                  class="content-delete-button table-delete-button"
+                  :class="{ confirming: isConfirmingDeletion('vocabulary', section.id, item) }"
+                  type="button"
+                  :disabled="contentDeleting"
+                  :aria-label="isConfirmingDeletion('vocabulary', section.id, item) ? `确认删除${item.term}` : `删除${item.term}`"
+                  :title="isConfirmingDeletion('vocabulary', section.id, item) ? `确认删除${item.term}` : `删除${item.term}`"
+                  @click="handleContentDelete('vocabulary', section.id, item)"
+                >
+                  <span v-if="isConfirmingDeletion('vocabulary', section.id, item)">确认删除</span>
+                  <svg v-else viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -198,22 +262,55 @@ onBeforeUnmount(() => {
               <div class="table-row table-head">
                 <span>语法</span><span>接续</span><span>含义与本段用法</span>
               </div>
-              <div v-for="item in section.grammar" :key="item.pattern" class="table-row">
+              <div v-for="(item, itemIndex) in section.grammar" :key="`${item.pattern}-${itemIndex}`" class="table-row" :class="{ editable: contentEditable }">
                 <span class="term-cell"><b lang="ja">{{ item.pattern }}</b></span>
                 <span>{{ item.connection }}</span>
                 <span><b>{{ item.meaning }}</b><small>{{ item.example }}</small></span>
+                <button
+                  v-if="contentEditable"
+                  class="content-delete-button table-delete-button"
+                  :class="{ confirming: isConfirmingDeletion('grammar', section.id, item) }"
+                  type="button"
+                  :disabled="contentDeleting"
+                  :aria-label="isConfirmingDeletion('grammar', section.id, item) ? `确认删除${item.pattern}` : `删除${item.pattern}`"
+                  :title="isConfirmingDeletion('grammar', section.id, item) ? `确认删除${item.pattern}` : `删除${item.pattern}`"
+                  @click="handleContentDelete('grammar', section.id, item)"
+                >
+                  <span v-if="isConfirmingDeletion('grammar', section.id, item)">确认删除</span>
+                  <svg v-else viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
               </div>
             </div>
           </section>
 
-          <section class="sentence-panel">
+          <section v-if="section.keySentences.length" class="sentence-panel">
             <header class="panel-heading">
               <span>04</span>
               <h3>重点句子解析</h3>
             </header>
 
-            <article v-for="(sentence, index) in section.keySentences" :key="sentence.original" class="sentence-card">
-              <div class="sentence-number">{{ String(index + 1).padStart(2, '0') }}</div>
+            <p v-if="showsContentError(section.id, ['keySentences'])" class="content-delete-error" role="alert">{{ contentError }}</p>
+
+            <article v-for="(sentence, index) in section.keySentences" :key="`${sentence.original}-${index}`" class="sentence-card" :class="{ editable: contentEditable }">
+              <div class="sentence-card-actions">
+                <button
+                  v-if="contentEditable"
+                  class="content-delete-button sentence-delete-button"
+                  :class="{ confirming: isConfirmingDeletion('keySentences', section.id, sentence) }"
+                  type="button"
+                  :disabled="contentDeleting"
+                  :aria-label="isConfirmingDeletion('keySentences', section.id, sentence) ? '确认删除这条重点句解析' : '删除这条重点句解析'"
+                  :title="isConfirmingDeletion('keySentences', section.id, sentence) ? '确认删除这条重点句解析' : '删除这条重点句解析'"
+                  @click="handleContentDelete('keySentences', section.id, sentence)"
+                >
+                  <span v-if="isConfirmingDeletion('keySentences', section.id, sentence)">确认删除</span>
+                  <svg v-else viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
               <blockquote lang="ja">{{ sentence.original }}</blockquote>
               <p class="sentence-translation">{{ sentence.translation }}</p>
               <div class="chunk-list">
@@ -233,7 +330,6 @@ onBeforeUnmount(() => {
               class="section-progress-control"
               :class="{ completed: isSectionCompleted(article, section.id) }"
             >
-              <span>{{ isSectionCompleted(article, section.id) ? '已学' : '未学' }}</span>
               <button
                 type="button"
                 :disabled="isArticleSaving(article.slug) || !progressLoaded"
