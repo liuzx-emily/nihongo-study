@@ -1,4 +1,5 @@
 import type { StudyArticle } from '../types'
+import osushiNiTsuite from './2026-09-15-osushi-ni-tsuite'
 import kamiTaiouShioTaiou from './2026-09-15-kami-taiou-shio-taiou'
 import languageNotFullyConveyed from './2026-09-14-language-not-fully-conveyed'
 import badJapaneseLesson from './2026-09-10-bad-japanese-lesson'
@@ -7,6 +8,7 @@ import odaNobunagaHieizan from './2026-09-14-oda-nobunaga-hieizan'
 import goodJapaneseLesson from './good-japanese-lesson'
 
 export const articles: StudyArticle[] = [
+  osushiNiTsuite,
   kamiTaiouShioTaiou,
   languageNotFullyConveyed,
   odaNobunagaHieizan,
