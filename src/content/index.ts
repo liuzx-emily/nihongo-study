@@ -1,4 +1,5 @@
 import type { StudyArticle } from '../types'
+import shogunHistoryAndLanguage from './2026-09-15-shogun-history-and-language'
 import whyJapaneseFindSakuraBeautiful from './2026-09-15-why-japanese-find-sakura-beautiful'
 import osushiNiTsuite from './2026-09-15-osushi-ni-tsuite'
 import kamiTaiouShioTaiou from './2026-09-15-kami-taiou-shio-taiou'
@@ -9,6 +10,7 @@ import odaNobunagaHieizan from './2026-09-14-oda-nobunaga-hieizan'
 import goodJapaneseLesson from './good-japanese-lesson'
 
 export const articles: StudyArticle[] = [
+  shogunHistoryAndLanguage,
   whyJapaneseFindSakuraBeautiful,
   osushiNiTsuite,
   kamiTaiouShioTaiou,
