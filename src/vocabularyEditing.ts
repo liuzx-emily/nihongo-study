@@ -1,8 +1,8 @@
 import { ref } from 'vue'
-import type { GrammarItem, KeySentence, StudyArticle, VocabularyItem } from './types'
+import type { GrammarItem, StudyArticle, VocabularyItem } from './types'
 
-export type DeletableContentKind = 'vocabulary' | 'grammar' | 'keySentences'
-export type DeletableContentItem = VocabularyItem | GrammarItem | KeySentence
+export type DeletableContentKind = 'vocabulary' | 'grammar'
+export type DeletableContentItem = VocabularyItem | GrammarItem
 
 export const contentEditable = import.meta.env.DEV
 export const contentDeleting = ref(false)
@@ -19,8 +19,7 @@ function sameVocabulary(left: VocabularyItem, right: VocabularyItem) {
 
 function itemKey(kind: DeletableContentKind, item: DeletableContentItem) {
   if (kind === 'vocabulary') return (item as VocabularyItem).term
-  if (kind === 'grammar') return (item as GrammarItem).pattern
-  return (item as KeySentence).original
+  return (item as GrammarItem).pattern
 }
 
 function sectionItems(article: StudyArticle, kind: DeletableContentKind) {
@@ -54,13 +53,12 @@ export async function deleteContentItem(
   contentError.value = ''
   contentErrorKind.value = kind
   contentErrorSectionId.value = sectionId
-  const route = kind === 'keySentences' ? 'key-sentences' : kind
   const body = kind === 'vocabulary'
     ? { sectionId, occurrence: occurrenceInArticle(article, kind, item), item }
     : { sectionId, occurrence: occurrenceInArticle(article, kind, item), itemKey: itemKey(kind, item) }
 
   try {
-    const response = await fetch(`/api/articles/${encodeURIComponent(article.slug)}/${route}`, {
+    const response = await fetch(`/api/articles/${encodeURIComponent(article.slug)}/${kind}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(body),

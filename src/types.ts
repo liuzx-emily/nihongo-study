@@ -12,15 +12,6 @@ export interface GrammarItem {
   example: string
 }
 
-export interface KeySentence {
-  original: string
-  translation: string
-  chunks: { text: string; note: string }[]
-  spokenNote: string
-  takeaway: string
-  takeawayExample: string
-}
-
 export interface StudySection {
   id: string
   title: string
@@ -28,7 +19,6 @@ export interface StudySection {
   translation: string
   vocabulary: VocabularyItem[]
   grammar: GrammarItem[]
-  keySentences: KeySentence[]
 }
 
 export interface StudyArticle {

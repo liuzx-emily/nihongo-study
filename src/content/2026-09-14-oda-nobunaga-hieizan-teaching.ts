@@ -1,6 +1,6 @@
 import type { StudySection } from '../types'
 
-type TeachingContent = Pick<StudySection, 'vocabulary' | 'grammar' | 'keySentences'>
+type TeachingContent = Pick<StudySection, 'vocabulary' | 'grammar'>
 
 const teachingContent: TeachingContent[] = [
   {
@@ -13,20 +13,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～なんて思われていなかった', connection: '普通形＋なんて＋思われていなかった', meaning: '当时根本没人认为会……；「なんて」突出出乎预料', example: '絶対優勝するなんて思われていなかった。' },
     ],
-    keySentences: [
-      {
-        original: 'スタートからね、もう絶対優勝するなんて思われていなかった。まあ、そういうね、あんまりこう強くない、有名ではないファミリーだったんですけども。',
-        translation: '从一开始，根本没人认为他肯定会夺冠；他出身的就是一个不太强、也不出名的家族。',
-        chunks: [
-          { text: 'スタートからね', note: '延续锦标赛比喻，指信长事业初期' },
-          { text: '絶対優勝するなんて', note: '把必定获胜作为当时难以想象的内容提出' },
-          { text: '思われていなかった', note: '被动形概括周围人的普遍评价' },
-        ],
-        spokenNote: '「ね」「まあ」「そういうね」「あんまりこう」保留了边组织语言边补充评价的口语节奏。',
-        takeaway: '～なんて思われていなかった：当时没人想到会……。',
-        takeawayExample: '彼が代表になるなんて、当時は誰にも思われていなかった。',
-      },
-    ],
   },
   {
     vocabulary: [
@@ -37,20 +23,6 @@ const teachingContent: TeachingContent[] = [
     ],
     grammar: [
       { pattern: '～と思ってくれたらいい', connection: '普通形＋と思ってくれたらいい', meaning: '你可以把它理解成……；请听者暂且采用某种理解', example: 'そんな雰囲気の仏教だと思ってくれたらいいと思います。' },
-    ],
-    keySentences: [
-      {
-        original: '「ほかは関係ないぞ。うちらはグループを作って、狭い中でやっていくぞ」みたいな雰囲気の仏教だと思ってくれたらいいと思います。',
-        translation: '可以把它理解成一种“其他人与我们无关，我们组成自己的团体，在小圈子里活动”的佛教氛围。',
-        chunks: [
-          { text: 'ほかは関係ないぞ', note: '虚构的粗略台词，用来强调封闭感' },
-          { text: 'みたいな雰囲気', note: '表示只是帮助理解的近似印象' },
-          { text: 'と思ってくれたらいい', note: '请求听者暂时按这个比喻理解' },
-        ],
-        spokenNote: '电子音乐与锐舞只是主播的即兴类比，不能当作对密教的学术定义。',
-        takeaway: '～みたいな雰囲気：像……那样的感觉或氛围。',
-        takeawayExample: '秘密基地みたいな雰囲気の店です。',
-      },
     ],
   },
   {
@@ -63,20 +35,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～なんて、なんて～', connection: '普通形＋なんて＋评价', meaning: '竟然做……，真是……；以惊讶或谴责评价行为', example: '子供や女の人を殺すなんて、なんてひでえやつだ。' },
     ],
-    keySentences: [
-      {
-        original: 'どれが正しいとか、どれが間違っているではなく、いろんな方向で一つの歴史を見ることによって、いろんな考え方ができると。',
-        translation: '不是要判断哪个正确、哪个错误，而是从各种方向看同一段历史，由此产生各种思考。',
-        chunks: [
-          { text: 'どれが正しいとか', note: '「とか」列举二元判断中的一项' },
-          { text: 'どれが間違っているではなく', note: '衔接略松；意思是“不以判断正误为重点”' },
-          { text: 'いろんな方向で', note: '自然表达常说「いろんな方向から」；这里保留原话' },
-        ],
-        spokenNote: '助词和否定衔接带有即兴组织痕迹，但主旨可以从上下文可靠确认。',
-        takeaway: 'AではなくB：不是A，而是B。',
-        takeawayExample: '答えを決めるのではなく、いろんな方向から考えます。',
-      },
-    ],
   },
   {
     vocabulary: [
@@ -87,20 +45,6 @@ const teachingContent: TeachingContent[] = [
     ],
     grammar: [
       { pattern: '～ないわけがない', connection: '动词ない形＋わけがない', meaning: '不可能不……；按条件推断必然会……', example: 'その状態で、お金が稼げないわけがない。' },
-    ],
-    keySentences: [
-      {
-        original: '僕だけ携帯電話の作り方とパソコンの作り方と、インターネットの、まあ整備の仕方、わかってます。みんな知りません、っていう状態で、お金が稼げないわけがない。',
-        translation: '只有我懂手机和电脑的制造方法，也懂互联网的建设方法；其他人全不知道，在这种状态下不可能赚不到钱。',
-        chunks: [
-          { text: '僕だけ', note: '反复强调知识只掌握在一人手中' },
-          { text: 'インターネットの、まあ整備の仕方', note: '停顿后用「まあ」修正并补充说法' },
-          { text: '稼げないわけがない', note: '双重否定，强烈断定一定能获利' },
-        ],
-        spokenNote: '这是解释寺院技术优势的现代假设，不是在陈述真实的手机商业史。',
-        takeaway: '～ないわけがない：不可能不……，必然会……。',
-        takeawayExample: 'これだけ需要があれば、売れないわけがありません。',
-      },
     ],
   },
   {
@@ -113,21 +57,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～てでも', connection: '动词て形＋でも', meaning: '即使付出某种代价仍然……', example: '70％のコミッションを払ってでも、たぶん結構お金は稼げます。' },
     ],
-    keySentences: [
-      {
-        original: '技術を学ぶため、このビジネスをするために「座」にお金を払い、そして、いざお店を出そうってなった時に「市」にお金を払って、もうお寺、がっぽがっぽですよ。',
-        translation: '为了学习技术、经营生意要向“座”交钱，真正准备开店时又要向“市”交钱，于是寺院赚得盆满钵满。',
-        chunks: [
-          { text: '「座」にお金を払い', note: '第一层费用用于取得技术和营业资格' },
-          { text: 'いざお店を出そうってなった時', note: '「いざ」强调真正到了采取行动的关头' },
-          { text: '「市」にお金を払って', note: '第二层费用用于取得实际卖货的场所' },
-          { text: 'がっぽがっぽですよ', note: '用夸张拟态词总结寺院大量获利' },
-        ],
-        spokenNote: '主播用现代“佣金”和“跳蚤市场”作类比，重点是说明双重收费结构。',
-        takeaway: 'いざ～となると：真正到了要……的时候。',
-        takeawayExample: 'いざ店を開くとなると、準備することが多いです。',
-      },
-    ],
   },
   {
     vocabulary: [
@@ -138,20 +67,6 @@ const teachingContent: TeachingContent[] = [
     ],
     grammar: [
       { pattern: 'そうなると～わけだ', connection: 'そうなると＋结果＋わけだ', meaning: '这样一来，自然就会得出……结果', example: 'そうなると、権力が手に入るわけなんですよね。' },
-    ],
-    keySentences: [
-      {
-        original: 'お金もある、戦う力もある。そうなるとどうなるか。権力が手に入るわけなんですよね。',
-        translation: '既有钱，又有战斗力。这样会怎样？自然就会获得权力。',
-        chunks: [
-          { text: 'お金もある、戦う力もある', note: '短句并列，列出获得权力的两个基础' },
-          { text: 'そうなるとどうなるか', note: '自问自答，引导听者推导结果' },
-          { text: '権力が手に入るわけ', note: '「わけ」把前面的条件归纳为自然结论' },
-        ],
-        spokenNote: '先列条件，再提问，最后回答，形成适合口头说明的三段节奏。',
-        takeaway: 'そうなると～わけだ：这样一来，自然就……。',
-        takeawayExample: '情報と資金が集まる。そうなると、影響力も強くなるわけです。',
-      },
     ],
   },
   {
@@ -164,20 +79,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～てたまるか', connection: '动词て形＋たまるか', meaning: '怎么能让……；绝不能容许……', example: '岐阜の田舎者なんかに天下を取られてたまるか。' },
     ],
-    keySentences: [
-      {
-        original: '俺の味方になりたいやつは京都に挨拶に来いよ。京都に挨拶に来たやつは、これから大事な俺の仲間として認めてやる。もし来ないやつは、わかってるな。',
-        translation: '想成为我方同伴的人就到京都来问候；来过的人会被承认为重要伙伴，不来的人应当明白后果。',
-        chunks: [
-          { text: '挨拶に来いよ', note: '命令形把礼节性拜访变成服从测试' },
-          { text: '認めてやる', note: '表现说话人自居上位、施予认可的态度' },
-          { text: 'わかってるな', note: '不明说后果，以共享常识施加威胁' },
-        ],
-        spokenNote: '这是主播替信长拟出的戏剧化台词，并非史料原文。',
-        takeaway: 'わかってるな：你知道后果吧；以省略内容施压。',
-        takeawayExample: '約束を破ったらどうなるか、わかってるな。',
-      },
-    ],
   },
   {
     vocabulary: [
@@ -188,20 +89,6 @@ const teachingContent: TeachingContent[] = [
     ],
     grammar: [
       { pattern: '～やがる', connection: '动词ます形去ます＋やがる', meaning: '竟敢……；以粗鲁口气表达愤怒或轻蔑', example: 'あの野郎、裏切りやがって。' },
-    ],
-    keySentences: [
-      {
-        original: '血はつながってないけども兄弟だというふうに考えていたんですけども、なんと裏切られると。',
-        translation: '虽然没有血缘关系，信长却把他看作兄弟，没想到竟然遭到背叛。',
-        chunks: [
-          { text: '血はつながってないけども', note: '先承认双方并非亲兄弟' },
-          { text: '兄弟だというふうに考えていた', note: '说明信长对姻亲关系的主观认识' },
-          { text: 'なんと裏切られる', note: '「なんと」突出意外，被动形从信长受害的角度叙述' },
-        ],
-        spokenNote: '连续两个「けども」体现主播边补充关系、边推进结果的节奏。',
-        takeaway: 'なんと～：没想到竟然……。',
-        takeawayExample: '味方だと思っていた相手が、なんと敵側につきました。',
-      },
     ],
   },
   {
@@ -214,20 +101,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～たものだ／～たもんだ', connection: '动词た形＋ものだ（口语：もんだ）', meaning: '真是处于……境地；本句表达被轻视后的感叹', example: '俺もなめられたもんだ。' },
     ],
-    keySentences: [
-      {
-        original: '俺の仲間にならなくてもいい。ただ、ただね、できれば中立。朝倉・浅井の味方でもなく、私の味方でもない状態にしてほしい。',
-        translation: '不成为我的同伴也可以，只希望尽可能保持中立，既不帮助朝仓、浅井，也不帮助我。',
-        chunks: [
-          { text: '仲間にならなくてもいい', note: '先降低要求，说明寺院不必支持自己' },
-          { text: 'ただ、ただね', note: '重复显示模拟谈判时对最低要求的强调' },
-          { text: '味方でもなく～味方でもない', note: '用双方并列否定具体解释中立' },
-        ],
-        spokenNote: '这是主播戏剧化转述信长的要求，不是信件原文的逐字引用。',
-        takeaway: 'Aでなくてもいい。ただBでいてほしい：不必A，但希望至少B。',
-        takeawayExample: '賛成してくれなくてもいい。ただ、中立でいてほしい。',
-      },
-    ],
   },
   {
     vocabulary: [
@@ -238,21 +111,6 @@ const teachingContent: TeachingContent[] = [
     ],
     grammar: [
       { pattern: '～がために', connection: '动词た形／名词＋である＋がために', meaning: '正因为……而导致；多用于重大或不利结果', example: 'お金と権力と武力を持ってしまったがために、政治の中に入っていきました。' },
-    ],
-    keySentences: [
-      {
-        original: 'その人たちがお金と権力と武力、戦う力を持ってしまったがために、その政治の中に入って、いろいろやろうと思っていた。',
-        translation: '正因为那些人拥有金钱、权力和武力，才进入政治领域，试图从事各种活动。',
-        chunks: [
-          { text: 'お金と権力と武力', note: '连续列举寺院介入政治所依靠的三种力量' },
-          { text: '戦う力', note: '紧接着用更易懂的说法解释「武力」' },
-          { text: '持ってしまったがために', note: '把拥有这些力量设为后来变化的原因' },
-          { text: 'いろいろやろうと思っていた', note: '指向不明确，反映即兴讲述中的概括性' },
-        ],
-        spokenNote: '能可靠确认的只有“介入政治并有所行动”，不能替主播补成具体政治主张。',
-        takeaway: '～がために：正因为……，结果……；常带批评或遗憾。',
-        takeawayExample: '力を持ちすぎたがために、争いに巻き込まれました。',
-      },
     ],
   },
   {
@@ -267,21 +125,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～んじゃないかっていう話もある', connection: '普通形＋んじゃないか＋っていう話もある', meaning: '也有“会不会是……”的说法；多层降低断言强度', example: '嘘の情報を流したんじゃないかっていう話もあるそうです。' },
     ],
-    keySentences: [
-      {
-        original: '宗教の施設も本当に燃やしてしまう男なんだなっていうふうに思われるためのイメージコントロールとして、嘘の情報を流したんじゃないかっていう話もあるそうです。',
-        translation: '也有说法认为，他可能散布虚假信息，以塑造连宗教设施都会烧毁的威慑形象。',
-        chunks: [
-          { text: '～男なんだなっていうふうに思われるため', note: '说明希望在他人心中形成的认知及目的' },
-          { text: 'イメージコントロールとして', note: '把传播信息解释为塑造形象的手段' },
-          { text: '流したんじゃないか', note: '以否定疑问形式谨慎提出推测' },
-          { text: '話もあるそうです', note: '进一步标明只是转述的一种观点' },
-        ],
-        spokenNote: '推测与传闻表达连续出现，说明这不是主播能够确认的历史事实。',
-        takeaway: '～んじゃないかっていう話もある：也存在“会不会是……”的说法。',
-        takeawayExample: '数字が後から誇張されたんじゃないかっていう話もあります。',
-      },
-    ],
   },
   {
     vocabulary: [
@@ -293,20 +136,6 @@ const teachingContent: TeachingContent[] = [
     grammar: [
       { pattern: '～やがる', connection: '动词ます形去ます＋やがる', meaning: '竟敢……；带愤怒或轻蔑', example: '俺が大事にしていたケーキ食べやがって。' },
       { pattern: '～がいがある', connection: '动词ます形去ます＋がいがある', meaning: '值得……；做……有价值', example: '調べがいのある歴史の人物です。' },
-    ],
-    keySentences: [
-      {
-        original: '終わらないから、誰かが忘れなきゃいけないと。',
-        translation: '因为这样永远不会结束，所以必须由某个人先放下。',
-        chunks: [
-          { text: '終わらないから', note: '承接蛋糕、可乐、布丁之间不断升级的报复' },
-          { text: '誰かが', note: '不限定具体一方，强调总要有人先停止' },
-          { text: '忘れなきゃいけない', note: '「忘れなければいけない」的口语缩约；对象是怨恨' },
-        ],
-        spokenNote: '句末「と」保留口头叙述中引用或结论悬置的感觉。',
-        takeaway: '誰かが～なきゃいけない：必须有人先……。',
-        takeawayExample: '争いを止めるには、誰かが先に謝らなきゃいけません。',
-      },
     ],
   },
 ]

@@ -23,7 +23,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       { pattern: '～と言いますか', connection: '名词／普通形＋と言いますか', meaning: '该说是……呢；或者说……', example: '今年は異常気象と言いますか、最近ずっと雨が降っています。' },
     ],
-    keySentences: [],
   },
   {
     title: '雨の多い今年の冬',
@@ -45,7 +44,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       { pattern: '～うちに入らない', connection: '名词＋の／动词普通形＋うちに入らない', meaning: '算不上……；还不属于……之列', example: '14度なら、寒いうちに入らないと思う人もいます。' },
     ],
-    keySentences: [],
   },
   {
     title: '喉とメキシコの天気',
@@ -69,7 +67,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { pattern: '～身として', connection: '动词辞书形／名词＋の＋身として', meaning: '作为……的人；站在……处境上', example: 'ポッドキャストを撮る身として、喉は大切です。' },
       { pattern: '～てくれよ', connection: '动词て形＋くれ＋よ', meaning: '带感情地要求或鼓励对方“请……吧”', example: '喉を大切にして頑張ってくれよ。' },
     ],
-    keySentences: [],
   },
   {
     title: '忘年会のサーモン',
@@ -89,7 +86,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '魚市場', reading: 'うおいちば', meaning: '鱼市；水产市场', note: '也可读作「さかないちば」，此处按常见复合词读法标注。' },
     ],
     grammar: [],
-    keySentences: [],
   },
   {
     title: '一匹丸ごとの値段',
@@ -107,7 +103,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '切り売り', reading: 'きりうり', meaning: '切开零卖', note: '将整块或整条商品按顾客需要切分出售。' },
     ],
     grammar: [],
-    keySentences: [],
   },
   {
     title: 'テーマの前のお便りコーナー',
@@ -137,7 +132,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { pattern: '～たところ', connection: '动词た形＋ところ', meaning: '做了……之后，结果……', example: 'メッセージを募集したところ、何人かから届きました。' },
       { pattern: '～てまいる', connection: '动词て形＋まいる', meaning: '「～てくる」的自谦或郑重表达', example: 'お便りコーナーの時間がやってまいりました。' },
     ],
-    keySentences: [],
   },
   {
     title: 'ミシガン州からのお便り',
@@ -167,7 +161,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'つまんない', meaning: '无聊的；没意思的', note: '「つまらない」的口语缩约。原文作「つまんなくて」。' },
     ],
     grammar: [],
-    keySentences: [],
   },
   {
     title: '三年間続けたことへの敬意',
@@ -189,7 +182,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '相当', reading: 'そうとう', meaning: '相当；非常', note: '修饰数量或程度，表示远高于一般水平。' },
     ],
     grammar: [],
-    keySentences: [],
   },
   {
     title: '楽しい時間としてのポッドキャスト',
@@ -217,7 +209,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       { pattern: '～と同じ並びで', connection: '名词＋と同じ並びで', meaning: '与……并列、处在同一序列中', example: '朝ご飯の時間と同じ並びで、ポッドキャストの時間があります。' },
     ],
-    keySentences: [],
   },
 ]
 

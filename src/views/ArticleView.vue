@@ -285,46 +285,6 @@ onBeforeUnmount(() => {
             </div>
           </section>
 
-          <section v-if="section.keySentences.length" class="sentence-panel">
-            <header class="panel-heading">
-              <span>04</span>
-              <h3>重点句子解析</h3>
-            </header>
-
-            <p v-if="showsContentError(section.id, ['keySentences'])" class="content-delete-error" role="alert">{{ contentError }}</p>
-
-            <article v-for="(sentence, index) in section.keySentences" :key="`${sentence.original}-${index}`" class="sentence-card" :class="{ editable: contentEditable }">
-              <div class="sentence-card-actions">
-                <button
-                  v-if="contentEditable"
-                  class="content-delete-button sentence-delete-button"
-                  :class="{ confirming: isConfirmingDeletion('keySentences', section.id, sentence) }"
-                  type="button"
-                  :disabled="contentDeleting"
-                  :aria-label="isConfirmingDeletion('keySentences', section.id, sentence) ? '确认删除这条重点句解析' : '删除这条重点句解析'"
-                  :title="isConfirmingDeletion('keySentences', section.id, sentence) ? '确认删除这条重点句解析' : '删除这条重点句解析'"
-                  @click="handleContentDelete('keySentences', section.id, sentence)"
-                >
-                  <span v-if="isConfirmingDeletion('keySentences', section.id, sentence)">确认删除</span>
-                  <svg v-else viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 6l12 12M18 6 6 18" />
-                  </svg>
-                </button>
-              </div>
-              <blockquote lang="ja">{{ sentence.original }}</blockquote>
-              <p class="sentence-translation">{{ sentence.translation }}</p>
-              <div class="chunk-list">
-                <div v-for="chunk in sentence.chunks" :key="chunk.text">
-                  <b lang="ja">{{ chunk.text }}</b><span>{{ chunk.note }}</span>
-                </div>
-              </div>
-              <div class="analysis-grid">
-                <div><p>{{ sentence.spokenNote }}</p></div>
-                <div class="takeaway"><p>{{ sentence.takeaway }}</p><em lang="ja">{{ sentence.takeawayExample }}</em></div>
-              </div>
-            </article>
-          </section>
-
           <footer v-if="progressEditable" class="section-progress-footer">
             <div
               class="section-progress-control"

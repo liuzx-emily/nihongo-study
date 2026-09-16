@@ -33,7 +33,7 @@ interface DeleteVocabularyRequest {
   item: VocabularyEntry
 }
 
-interface DeleteStructuredItemRequest {
+interface DeleteGrammarRequest {
   sectionId: string
   occurrence: number
   itemKey: string
@@ -124,9 +124,9 @@ function validateDeleteVocabularyRequest(value: unknown): DeleteVocabularyReques
   }
 }
 
-function validateDeleteStructuredItemRequest(value: unknown): DeleteStructuredItemRequest {
+function validateDeleteGrammarRequest(value: unknown): DeleteGrammarRequest {
   if (!value || typeof value !== 'object') throw new Error('请求内容必须是对象')
-  const body = value as Partial<DeleteStructuredItemRequest>
+  const body = value as Partial<DeleteGrammarRequest>
   if (typeof body.sectionId !== 'string' || !idPattern.test(body.sectionId)) throw new Error('section id 格式无效')
   if (!Number.isSafeInteger(body.occurrence) || (body.occurrence ?? -1) < 0) throw new Error('内容序号无效')
   if (typeof body.itemKey !== 'string' || !body.itemKey) throw new Error('内容标识无效')
@@ -261,10 +261,10 @@ async function deleteVocabularyFromSource(slug: string, request: DeleteVocabular
   await fs.writeFile(match.filePath, updated, 'utf8')
 }
 
-function structuredItemKey(node: ts.Expression, propertyName: 'pattern' | 'original') {
+function grammarItemKey(node: ts.Expression) {
   if (ts.isObjectLiteralExpression(node)) {
     for (const property of node.properties) {
-      if (ts.isPropertyAssignment(property) && propertyNameText(property.name) === propertyName) {
+      if (ts.isPropertyAssignment(property) && propertyNameText(property.name) === 'pattern') {
         return literalText(property.initializer)
       }
     }
@@ -274,12 +274,10 @@ function structuredItemKey(node: ts.Expression, propertyName: 'pattern' | 'origi
   }
 }
 
-async function deleteStructuredItemFromSource(
+async function deleteGrammarFromSource(
   slug: string,
-  request: DeleteStructuredItemRequest,
-  arrayName: 'grammar' | 'keySentences',
+  request: DeleteGrammarRequest,
 ) {
-  const propertyName = arrayName === 'grammar' ? 'pattern' : 'original'
   const files = await articleSourceFiles(slug)
   const matches: { filePath: string; source: string; array: ts.ArrayLiteralExpression; index: number }[] = []
 
@@ -288,12 +286,12 @@ async function deleteStructuredItemFromSource(
     const visit = (node: ts.Node) => {
       if (
         ts.isPropertyAssignment(node)
-        && propertyNameText(node.name) === arrayName
+        && propertyNameText(node.name) === 'grammar'
         && ts.isArrayLiteralExpression(node.initializer)
       ) {
         const array = node.initializer
         array.elements.forEach((element, index) => {
-          if (ts.isExpression(element) && structuredItemKey(element, propertyName) === request.itemKey) {
+          if (ts.isExpression(element) && grammarItemKey(element) === request.itemKey) {
             matches.push({ filePath: file.filePath, source: file.source, array, index })
           }
         })
@@ -386,7 +384,7 @@ function contentEditingPlugin(): Plugin {
     configureServer(server) {
       server.middlewares.use(async (request, response, next) => {
         const pathname = new URL(request.url ?? '/', 'http://localhost').pathname
-        const match = pathname.match(/^\/api\/articles\/([^/]+)\/(vocabulary|grammar|key-sentences)$/)
+        const match = pathname.match(/^\/api\/articles\/([^/]+)\/(vocabulary|grammar)$/)
         if (!match) return next()
         if (request.method !== 'DELETE') {
           sendJson(response, 405, { error: '不支持的内容 API 请求' })
@@ -399,10 +397,9 @@ function contentEditingPlugin(): Plugin {
           const rawBody = await readRequestBody(request)
           const operation = match[2] === 'vocabulary'
             ? writeQueue.then(() => deleteVocabularyFromSource(slug, validateDeleteVocabularyRequest(rawBody)))
-            : writeQueue.then(() => deleteStructuredItemFromSource(
+            : writeQueue.then(() => deleteGrammarFromSource(
                 slug,
-                validateDeleteStructuredItemRequest(rawBody),
-                match[2] === 'grammar' ? 'grammar' : 'keySentences',
+                validateDeleteGrammarRequest(rawBody),
               ))
           writeQueue = operation.catch(() => undefined)
           await operation
