@@ -176,6 +176,26 @@ function vocabularyMatches(left: VocabularyEntry, right: VocabularyEntry) {
     && left.note === right.note
 }
 
+function arrayElementRemovalRange(array: ts.ArrayLiteralExpression, index: number) {
+  const elements = array.elements
+  const element = elements[index]!
+  let start = element.getStart()
+  let end = element.end
+
+  if (index < elements.length - 1) {
+    end = elements[index + 1]!.getStart()
+  } else if (index > 0) {
+    start = elements[index - 1]!.end
+  } else {
+    // A one-item array may have a trailing comma. Removing only the element
+    // would turn `[item,]` into `[,]`, which contains an undefined entry.
+    start = array.getStart() + 1
+    end = array.end - 1
+  }
+
+  return { start, end }
+}
+
 async function articleSourceFiles(slug: string) {
   const contentDirectory = path.resolve(process.cwd(), 'src/content')
   const fileNames = (await fs.readdir(contentDirectory)).filter((name) => name.endsWith('.ts'))
@@ -235,15 +255,7 @@ async function deleteVocabularyFromSource(slug: string, request: DeleteVocabular
 
   const match = matches[request.occurrence]
   if (!match) throw new Error('源码中的单词已发生变化，请刷新页面后重试')
-  const elements = match.array.elements
-  const element = elements[match.index]!
-  let start = element.getStart()
-  let end = element.end
-  if (match.index < elements.length - 1) {
-    end = elements[match.index + 1]!.getStart()
-  } else if (match.index > 0) {
-    start = elements[match.index - 1]!.end
-  }
+  const { start, end } = arrayElementRemovalRange(match.array, match.index)
 
   const updated = match.source.slice(0, start) + match.source.slice(end)
   await fs.writeFile(match.filePath, updated, 'utf8')
@@ -293,12 +305,7 @@ async function deleteStructuredItemFromSource(
 
   const match = matches[request.occurrence]
   if (!match) throw new Error('源码中的学习内容已发生变化，请刷新页面后重试')
-  const elements = match.array.elements
-  const element = elements[match.index]!
-  let start = element.getStart()
-  let end = element.end
-  if (match.index < elements.length - 1) end = elements[match.index + 1]!.getStart()
-  else if (match.index > 0) start = elements[match.index - 1]!.end
+  const { start, end } = arrayElementRemovalRange(match.array, match.index)
   await fs.writeFile(match.filePath, match.source.slice(0, start) + match.source.slice(end), 'utf8')
 }
 
