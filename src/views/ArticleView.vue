@@ -33,6 +33,7 @@ const showBackToTop = ref(false)
 const activeSection = ref('')
 const confirmingBulkAction = ref(false)
 const bulkButton = ref<HTMLButtonElement>()
+const tocSections = ref<HTMLElement>()
 const confirmingDeletion = shallowRef<{
   kind: DeletableContentKind
   sectionId: string
@@ -55,6 +56,20 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
+function revealActiveTocSection(alignToTop = false) {
+  const container = tocSections.value
+  const activeLink = container?.querySelector<HTMLElement>('.toc-section-link.active')
+  if (!container || !activeLink) return
+
+  const containerRect = container.getBoundingClientRect()
+  const linkRect = activeLink.getBoundingClientRect()
+  if (alignToTop || linkRect.top < containerRect.top) {
+    container.scrollTop += linkRect.top - containerRect.top
+  } else if (linkRect.bottom > containerRect.bottom) {
+    container.scrollTop += linkRect.bottom - containerRect.bottom
+  }
+}
+
 async function initializeArticle() {
   confirmingBulkAction.value = false
   confirmingDeletion.value = undefined
@@ -68,6 +83,8 @@ async function initializeArticle() {
   const firstIncomplete = article.value.sections.find((section) => !isSectionCompleted(article.value!, section.id))
   document.getElementById(firstIncomplete?.id ?? '')?.scrollIntoView({ block: 'start' })
   updateReadingState()
+  await nextTick()
+  revealActiveTocSection(true)
 }
 
 async function refreshProgress() {
@@ -140,6 +157,10 @@ onMounted(() => {
   document.addEventListener('keydown', handleEscape)
 })
 watch(() => route.params.slug, () => void initializeArticle())
+watch(activeSection, async () => {
+  await nextTick()
+  revealActiveTocSection()
+})
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', updateReadingState)
   window.removeEventListener('focus', refreshProgress)
@@ -152,7 +173,6 @@ onBeforeUnmount(() => {
   <div v-if="article" class="article-page">
     <div class="reading-progress" :style="{ width: `${readingProgress}%` }" />
     <header class="article-hero">
-      <RouterLink class="back-link" to="/">← 返回学习档案</RouterLink>
       <a
         v-if="article.url"
         class="source-link"
@@ -194,29 +214,34 @@ onBeforeUnmount(() => {
 
     <div class="article-layout">
       <aside class="toc">
-        <p>CONTENTS</p>
-        <RouterLink
-          v-for="(section, index) in article.sections"
-          :key="section.id"
-          :to="{ hash: `#${section.id}` }"
-          :class="{ active: activeSection === section.id, completed: isSectionCompleted(article, section.id) }"
-        >
-          <span class="toc-number">{{ String(index + 1).padStart(2, '0') }}</span>
-          <span class="toc-title">{{ section.title }}</span>
-          <svg class="toc-progress-icon" viewBox="0 0 20 20" aria-label="已学">
-            <path d="m4 10 4 4 8-9" />
-          </svg>
-        </RouterLink>
+        <div class="toc-header">
+          <span>CONTENTS</span>
+          <RouterLink class="toc-home-link" to="/">
+            <span aria-hidden="true">←</span>
+            <span>档案</span>
+          </RouterLink>
+        </div>
+        <nav ref="tocSections" class="toc-sections" aria-label="文章目录">
+          <RouterLink
+            v-for="(section, index) in article.sections"
+            :key="section.id"
+            class="toc-section-link"
+            :to="{ hash: `#${section.id}` }"
+            :class="{ active: activeSection === section.id, completed: isSectionCompleted(article, section.id) }"
+          >
+            <span class="toc-number">{{ String(index + 1).padStart(2, '0') }}</span>
+            <span class="toc-title">{{ section.title }}</span>
+          </RouterLink>
+        </nav>
       </aside>
 
       <article class="study-content">
         <section
           v-for="(section, sectionIndex) in article.sections"
-          :id="section.id"
           :key="section.id"
           class="study-section"
         >
-          <header class="study-section-header">
+          <header :id="section.id" class="study-section-header">
             <div>
               <span>SECTION {{ String(sectionIndex + 1).padStart(2, '0') }}</span>
               <h2 lang="ja">{{ section.title }}</h2>
@@ -313,10 +338,12 @@ onBeforeUnmount(() => {
       class="back-to-top"
       type="button"
       aria-label="返回顶部"
+      title="返回顶部"
       @click="scrollToTop"
     >
       <span aria-hidden="true">↑</span>
     </button>
+
   </div>
   <div v-else class="not-found">
     <p>404</p><h1>没有找到这篇档案</h1><RouterLink to="/">返回首页</RouterLink>

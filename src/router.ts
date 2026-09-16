@@ -6,7 +6,7 @@ export default createRouter({
   history: createWebHashHistory(),
   scrollBehavior(to, _from, savedPosition) {
     if (savedPosition) return savedPosition
-    if (to.hash) return { el: to.hash, top: 88, behavior: 'smooth' }
+    if (to.hash) return { el: to.hash, top: 20, behavior: 'smooth' }
     return { top: 0 }
   },
   routes: [
