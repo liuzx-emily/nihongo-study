@@ -93,12 +93,6 @@ const sections: Omit<StudySection, 'id'>[] = [
         meaning: '达到某人所说的程度；像某人说得那么……',
         example: '桜ってみんなが言うほど綺麗ですか。',
       },
-      {
-        pattern: '～っていうふうに',
-        connection: '引用内容＋っていうふうに',
-        meaning: '以“……”这样的方式／这样说',
-        example: '「早く終わってしまうので良くない」っていうふうに言う学生もいました。',
-      },
     ],
   },
   {
@@ -139,12 +133,6 @@ const sections: Omit<StudySection, 'id'>[] = [
         connection: '疑問詞を含む文＋かっていうと',
         meaning: '要说为什么……；说到……的原因',
         example: 'どうして国の花になっているかっていうと、長い間咲くからです。',
-      },
-      {
-        pattern: '～てもいいじゃないか',
-        connection: '動詞て形／イ形容詞くて／ナ形容詞・名詞で＋もいいじゃないか',
-        meaning: '……不也可以吗；……也未尝不可',
-        example: '長く咲くから綺麗でもいいじゃないか。',
       },
       {
         pattern: '答えから言うと／言いますと',

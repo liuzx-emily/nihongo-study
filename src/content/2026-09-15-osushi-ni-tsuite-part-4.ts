@@ -28,8 +28,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '間違いない', reading: 'まちがいない', meaning: '不会错；准没错', note: '口语中表示说话人有较强把握；这里又以「かなと思います」略微缓和语气。' },
     ],
     grammar: [
-      { pattern: '～ば～ほど', connection: '动词ば形＋同一动词辞书形＋ほど', meaning: '越……越……', example: '海が冷たければ冷たいほど脂が乗るんですね。' },
-      { pattern: '～といえば', connection: '名词＋といえば', meaning: '说到……；提起……', example: '寿司といえば東京のよりなんですよ。' },
       { pattern: '正直言うと', connection: '正直＋言うと', meaning: '老实说；说实话', example: '正直言うと、食べたい魚によるんだけど。' },
     ],
   },
@@ -88,9 +86,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '回転寿司', reading: 'かいてんずし', meaning: '回转寿司', note: '指寿司通过传送带等方式送到顾客面前的店铺形式。' },
     ],
     grammar: [
-      { pattern: '～っていって', connection: '名词＋っていって', meaning: '叫作……；所谓……', example: '暖流っていって、温かい海の流れが入っていくんですね。' },
-      { pattern: '～だっけ', connection: '名词／普通形＋だっけ（名词、ナ形容词常接「だ」）', meaning: '是……来着吗；用于回想不确定的信息', example: 'ブルーオーシャンだっけ？' },
-      { pattern: '～にとって', connection: '名词＋にとって', meaning: '对……而言；从……的立场来看', example: '夢の海です、日本人にとってね。' },
     ],
   },
   {
@@ -133,8 +128,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     ],
     grammar: [
       { pattern: '～し、～し', connection: '普通形＋し', meaning: '既……又……；列举多个理由或特征', example: '魚もおいしかったし、ご飯もおいしかったし、直接握ってくれるし。' },
-      { pattern: '～っていうことで', connection: '普通形／引用内容＋っていうことで', meaning: '因为抱着……的想法；于是就……', example: 'やっぱり最後はお寿司食べたいなっていうことで。' },
-      { pattern: '～っていう方', connection: '引用内容＋っていう＋方', meaning: '觉得／处于……情况的人', example: 'そもそもお金もちょっと不安だからっていう方。' },
     ],
   },
 ]

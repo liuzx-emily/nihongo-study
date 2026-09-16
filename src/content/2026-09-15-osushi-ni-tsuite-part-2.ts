@@ -59,7 +59,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '伝わる', reading: 'つたわる', meaning: '传入、流传', note: '此处指食物保存方法跨地区传入日本。' },
     ],
     grammar: [
-      { pattern: '～ってんじゃねえか', connection: '动词て形＋いる→てん＋じゃねえか', meaning: '这不就是……吗（粗犷吐槽）', example: '腐ってんじゃねえかよ。' },
     ],
   },
   {
@@ -153,7 +152,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     ],
     grammar: [
       { pattern: '～までには', connection: '动词辞书形／名词＋までには', meaning: '到……之前；要达到……需……', example: '酸っぱい魚を食べるまでには時間がかかります。' },
-      { pattern: '～じゃねえかい', connection: '普通形＋じゃねえかい', meaning: '不就……吗（随意、带人物语气）', example: '切って食べればいいじゃねえかい。' },
     ],
   },
   {
@@ -223,16 +221,11 @@ const sections: Omit<StudySection, 'id'>[] = [
     vocabulary: [
       { term: '巻き寿司', reading: 'まきずし', meaning: '卷寿司', note: '用海苔等包住米饭和配料卷制而成。' },
       { term: '細巻き', reading: 'ほそまき', meaning: '细卷', note: '通常较细，里面放一种主要配料。' },
-      { term: 'ぴょろっと', meaning: '细长地伸着、溜溜地穿过', note: '主播用拟态词表现细长鱼肉处于卷芯的样子。' },
       { term: '太巻き', reading: 'ふとまき', meaning: '粗卷', note: '较粗，原话举出三四种材料。' },
       { term: 'カリフォルニアロール', meaning: '加州卷', note: '主播说其基础来自太卷。' },
       { term: '周りを揚げる', reading: 'まわりをあげる', meaning: '把外层炸制', note: '「揚げる」用于油炸。' },
     ],
-    grammar: [
-      { pattern: '～って知ってる', connection: '疑问内容／普通形＋って知っている', meaning: '你知道……吗（口语）', example: 'どれくらい種類があるのかって知ってます？' },
-      { pattern: '～っていうのは', connection: '名词／引用内容＋っていうのは', meaning: '所谓……；至于……', example: '太巻きっていうのは、三つ、四つの材料が入っています。' },
-      { pattern: '～なんだっけ', connection: '疑问词／名词＋なんだっけ', meaning: '……来着（努力回想）', example: 'フィラデルフィア、なんだっけ、クリームチーズ。' },
-    ],
+    grammar: [],
   },
   {
     title: '手巻き、ちらし、押し寿司',
@@ -256,9 +249,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'プレスをかける', meaning: '施压、压制', note: '外来表达，对应前面的「押す」。' },
     ],
     grammar: [
-      { pattern: '～として人気がある', connection: '名词＋として＋人気がある', meaning: '作为……很受欢迎', example: '家で食べる料理として人気があります。' },
       { pattern: '～でいうと', connection: '名词＋でいうと', meaning: '若从……来说；说到……方面', example: 'それ以外のお寿司でいうと、ちらし寿司があります。' },
-      { pattern: '～なんていうのもある', connection: '名词＋なんていうのもある', meaning: '也有……这样一种东西', example: '押し寿司なんていうのもあります。' },
     ],
   },
   {
@@ -287,7 +278,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'ぺろっと', meaning: '轻巧地、薄薄地放上去的样子', note: '此处形象说明把鱼片搭在饭团上。' },
     ],
     grammar: [
-      { pattern: '～として食べられている', connection: '名词＋として＋被动持续形', meaning: '以……的形式一直被食用', example: '400年ぐらい前からあるスタイルとして食べられています。' },
       { pattern: '～のもまた一つ', connection: '动词普通形＋のもまた一つ＋评价', meaning: '……也别有一种……；也是一种选择', example: '新幹線に乗りながら食べられるのも、これもまた一つ、おつですよね。' },
       { pattern: '見た目的には', connection: '名词＋的＋には', meaning: '从外观上看；就视觉而言', example: '見た目的には一番シンプルです。' },
     ],
@@ -309,9 +299,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '～といわれております', reading: '～といわれております', meaning: '据说……、一般认为……', note: '比「いわれています」更郑重，放在轻松口语中略带戏谑感。' },
     ],
     grammar: [
-      { pattern: '～んじゃん', connection: '普通形＋んじゃん', meaning: '不就是……嘛（随意地认定）', example: '誰でも作れんじゃんって思いました。' },
-      { pattern: '～っていうのではできない', connection: '引用内容＋っていうのでは＋できない', meaning: '仅凭“……”这种想法或做法是办不到的', example: '「明日からやってみよう」っていうのではできません。' },
-      { pattern: '～といわれております', connection: '普通形＋といわれております', meaning: '据说……；一般认为……（郑重说法）', example: '明日から始めるというのではできないといわれております。' },
     ],
   },
 ]

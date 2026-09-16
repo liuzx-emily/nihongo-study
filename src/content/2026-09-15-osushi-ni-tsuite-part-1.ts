@@ -21,7 +21,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '肌寒い', reading: 'はだざむい', meaning: '略有寒意的', note: '比「寒い」程度轻，常形容皮肤感到微凉。' },
     ],
     grammar: [
-      { pattern: '～と言いますか', connection: '名词／普通形＋と言いますか', meaning: '该说是……呢；或者说……', example: '今年は異常気象と言いますか、最近ずっと雨が降っています。' },
     ],
   },
   {
@@ -64,7 +63,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '今日この頃', reading: 'きょうこのごろ', meaning: '最近这些日子', note: '常用作略带书面或诙谐色彩的收束语。' },
     ],
     grammar: [
-      { pattern: '～身として', connection: '动词辞书形／名词＋の＋身として', meaning: '作为……的人；站在……处境上', example: 'ポッドキャストを撮る身として、喉は大切です。' },
       { pattern: '～てくれよ', connection: '动词て形＋くれ＋よ', meaning: '带感情地要求或鼓励对方“请……吧”', example: '喉を大切にして頑張ってくれよ。' },
     ],
   },

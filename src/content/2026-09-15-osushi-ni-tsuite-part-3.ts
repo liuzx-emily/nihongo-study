@@ -31,8 +31,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     ],
     grammar: [
       { pattern: '～もので言うと', connection: '名词＋で言うと（原文为「安いもので言うと」）', meaning: '若从……这一类来说；以……为例来说', example: '安いもので言うと、回転寿司があります。' },
-      { pattern: '～わけですよ', connection: '普通形＋わけだ／わけですよ', meaning: '也就是说自然会得出……；用于归纳前面的金额与结果', example: 'この値段なら、お腹いっぱい食べられるわけですよ。' },
-      { pattern: '～ってよく言う', connection: '引用内容＋って＋言う', meaning: '人们常把……叫作……；「って」是口语引用标记', example: 'こういう店を「回らないお寿司」ってよく言います。' },
       { pattern: '～になると', connection: '名词／动词辞书形＋となると', meaning: '到了……的情况或阶段，就……', example: 'ディナーになると、値段が大きく上がります。' }
     ],
   },
@@ -97,7 +95,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     ],
     grammar: [
       { pattern: '～すぎて', connection: '动词ます形去ます／い形容词去い／な形容词＋すぎて', meaning: '因为过于……而产生后续结果', example: '美味しすぎて、笑っちゃいます。' },
-      { pattern: '～として', connection: '名词＋として', meaning: '作为……；以……的资格或用途', example: '必要なものとして、お米や魚があります。' },
       { pattern: '～から～まで', connection: '名词＋から＋名词＋まで', meaning: '从一个范围端点一直到另一端点', example: '高いものから安いものまであります。' },
       { pattern: '不思議と～', connection: '不思議と＋述语', meaning: '不可思议地；说来也怪，结果竟然……', example: 'くっついていないのに、不思議と丸になっています。' }
     ],
@@ -138,7 +135,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     ],
     grammar: [
       { pattern: '～一つ取っても', connection: '名词＋一つ取っても', meaning: '即便只举……这一项来看，也……', example: '魚一つ取っても、値段が大きく違います。' },
-      { pattern: '～としては', connection: '名词＋としては', meaning: '站在……的身份或立场来说', example: '漁師さんとしては、たくさん取れたほうが儲かります。' },
       { pattern: '～んだと', connection: '普通形＋んだ＋と（引用）', meaning: '（对方坚持或说明）并不是那样／是这么回事；句末「と」承接隐含的“说、认为”', example: '数を取ればいいわけではない、違うんだと。' },
       { pattern: '～わけにはいかない', connection: '动词辞书形＋わけにはいかない', meaning: '受情理、条件或现实限制而不能……', example: '市場で魚を全部食べるわけにはいきません。' },
       { pattern: '～だったりとか', connection: '名词＋だったりとか／动词た形＋りとか', meaning: '口语列举若干代表性项目，并暗示还有其他因素', example: '魚の色だったりとか、目の色だったりとかを見ます。' }
@@ -198,7 +194,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'オーガナイズする', meaning: '组织；统筹安排', note: '这里涵盖食材、酒、器皿及五感体验的整体设计。' }
     ],
     grammar: [
-      { pattern: '～っていって', connection: '名称＋っていって', meaning: '叫作……；用来引出名称及后续说明', example: '小鉢っていって、小さい料理を出す器があります。' },
       { pattern: '～っぽい', connection: '名词／动词ます形去ます＋っぽい', meaning: '带有……感觉；看起来像……', example: '土っぽい質感のお皿です。' },
       { pattern: '～なのか、～なのか', connection: '名词／な形容词＋なのか；普通形＋のか', meaning: '是……还是……，列举需要判断或选择的方案', example: '無地なのか、絵があるのかも選びます。' },
       { pattern: '～なんて思うと', connection: '普通形＋なんて＋思うと', meaning: '一想到竟然是……，就……；「なんて」带惊叹或强调', example: '全部選んでいるなんて思うと、すごいですね。' }
@@ -229,7 +224,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'そういうのもなしに', meaning: '也没有那些顾虑；撇开那些事', note: '「の」概括前面的担心；句末「に」保持接续感。' }
     ],
     grammar: [
-      { pattern: '～っていう方', connection: '引用内容＋っていう＋方', meaning: '说……的那类人；有……想法的人', example: '日本で寿司を食べたいっていう方におすすめです。' },
       { pattern: '～のはありだ', connection: '动词普通形＋のは＋ありだ', meaning: '做……是可行的、值得考虑的选择', example: 'まず安い店で試すのはありだと思います。' },
       { pattern: '～かっていうと、そんなことはない', connection: '普通形＋かっていうと＋否定回应', meaning: '若问是否……，其实并非如此；用来纠正容易产生的推断', example: '安い店がまずいかっていうと、そんなことはありません。' },
       { pattern: '～なら', connection: '名词／普通形＋なら', meaning: '若以……这一条件或标准来看', example: 'この値段でこの味なら、美味しいです。' },
@@ -286,8 +280,6 @@ const sections: Omit<StudySection, 'id'>[] = [
     ],
     grammar: [
       { pattern: '～てほしいのが', connection: '动词て形＋ほしい＋の＋が', meaning: '希望对方做的事情是……；用「の」名词化后提出主题', example: '注意してほしいのが、食べ方です。' },
-      { pattern: '～っていうのは', connection: '名词／引用＋っていうのは', meaning: '所谓……；提出并说明某个对象', example: '高いお寿司屋さんっていうのは、食べ方も決めています。' },
-      { pattern: '～とか、～とかっていうのは', connection: '普通形＋とか＋并列＋っていうのは', meaning: '像是否……之类的问题；先举例再设为话题', example: '醤油をつけるかとか、そのまま食べるかとかっていうのは、聞きます。' },
       { pattern: 'どれくらい～かっていうと', connection: 'どれくらい＋述语＋かっていうと', meaning: '要说有多么……，后接具体比喻说明程度', example: 'どれくらい違うかっていうと、別の競技ぐらい違います。' },
       { pattern: '～ぐらいだ', connection: '普通形＋ぐらい＋评价', meaning: '达到像……一样的程度；用具体场景夸张说明', example: '違うスポーツをするぐらい不自然です。' }
     ],

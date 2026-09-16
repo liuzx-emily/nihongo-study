@@ -21,9 +21,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '照らし合わせる', reading: 'てらしあわせる', meaning: '相互对照；比照', note: '「人生を自然に照らし合わせる」在这里指借自然景象映照、思考自己的人生。' },
     ],
     grammar: [
-      { pattern: '～っていうことで', connection: '普通形／名词 + っていうことで', meaning: '因为……；基于……这一想法（口语）', example: '自分たちのルーツをしっかり見ていこうっていうことで、『源氏物語』が生まれる。' },
       { pattern: 'だからこそ', connection: 'だから + こそ', meaning: '正因为如此；以「こそ」加强原因', example: 'だからこそ、ひらがなが生まれた。' },
-      { pattern: '～わけなんですね', connection: '普通形 + わけなんですね', meaning: '也就是说……；原来是这么回事，用于归纳前文结论', example: '日本人は桜を綺麗だと思えるようになったわけなんですね。' },
       { pattern: '～だけではなく', connection: '名词／普通形 + だけではなく', meaning: '不只是……，还……', example: '物の哀れっていうのは、桜だけではなく、全てのこの世のものに共感できた時にも感じられる。' },
     ],
   },
@@ -47,8 +45,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'ドキドキする', reading: 'ドキドキする', meaning: '心怦怦跳；紧张或兴奋', note: '此处指看电影时获得刺激、投入的感受。' },
     ],
     grammar: [
-      { pattern: '～にとって', connection: '名词 + にとって', meaning: '对……而言；站在……的立场看', example: '今の時代生きている私たちにとって、物の哀れは大切だ。' },
-      { pattern: '～ってこと', connection: '普通形 + ってこと', meaning: '也就是说……；所谓……这件事（口语）', example: '2つ目は考える習慣がないってことですね。' },
       { pattern: '～たら心壊れちゃう', connection: '动词た形 + ら + 结果；壊れてしまう→壊れちゃう', meaning: '要是……的话，心理会承受不住；以口语缩约突出说话人的强烈感受', example: 'そんなことやってたら心壊れちゃう。' },
       { pattern: '～なんて、できない', connection: '普通形 + なんて + 否定表达', meaning: '像……这种事，根本做不到；带有认为不现实的语气', example: '自分の人生について考えようなんて、できないですよね。' },
     ],
@@ -98,7 +94,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { pattern: '～ております', connection: '动词て形 + おります', meaning: '正在……；「～ています」的谦逊、郑重说法', example: '会話レッスンもやっております。' },
       { pattern: '～だけではなくて', connection: '名词／普通形 + だけではなくて', meaning: '不仅……而且……；本段用来强调课程是双向学习', example: '僕が教えるだけではなくて、クラスメート同士でも文化を紹介します。' },
       { pattern: '～同士で', connection: '名词 + 同士で', meaning: '同类身份的人彼此之间做……', example: 'クラスメート同士で自分の国の文化を紹介します。' },
-      { pattern: '～という方', connection: '引用内容 + という方', meaning: '想……的人；符合前述描述的各位', example: 'ディスカッションしてみたいという方は、メールを送ってください。' },
     ],
   },
 ]
