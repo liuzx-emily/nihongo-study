@@ -270,11 +270,7 @@ const sections: Omit<StudySection, 'id'>[] = [
 最后，是大家想象中的日本 Japanese sushi，也就是握寿司。把鱼片轻轻放在一个小米饭团上，然后享用。从外观看它是最简单的，但它其实是最难的。`,
     vocabulary: [
       { term: '柿の葉寿司', reading: 'かきのはずし', meaning: '柿叶寿司', note: '用柿叶包裹的传统寿司；主播逐字解释了名称。' },
-      { term: '包まれる', reading: 'つつまれる', meaning: '被包裹', note: '「葉っぱに包まれた寿司」表示用叶子包起来。' },
-      { term: 'あり', meaning: '可行、可以接受的选择', note: '「ありなんじゃないか」是口语评价，意为值得考虑。' },
-      { term: 'トラディショナル', meaning: '传统的', note: '英语 traditional 的片假名表达，紧接前面的历史说明。' },
       { term: 'おつ', meaning: '别有风趣、有情趣', note: '表示做法或体验颇有雅趣。' },
-      { term: 'おしゃんてぃ', meaning: '时髦、潮', note: '由「おしゃれ」戏谑变化而来的轻松说法。' },
       { term: 'ぺろっと', meaning: '轻巧地、薄薄地放上去的样子', note: '此处形象说明把鱼片搭在饭团上。' },
     ],
     grammar: [
@@ -293,10 +289,7 @@ const sections: Omit<StudySection, 'id'>[] = [
     vocabulary: [
       { term: '握る', reading: 'にぎる', meaning: '握制（寿司）', note: '寿司语境中指用手将醋饭与食材整形成握寿司。' },
       { term: '修行', reading: 'しゅぎょう', meaning: '修业、磨炼', note: '指在行业中长期学习技术和规范。' },
-      { term: 'やっと', meaning: '终于、好不容易才', note: '强调多年训练后才达到为客人制作的阶段。' },
-      { term: 'なりてえ', meaning: '想成为', note: '「なりたい」的粗犷口语音变。' },
       { term: '繊細', reading: 'せんさい', meaning: '细腻、精细', note: '形容握寿司工作对技术和细节要求高。' },
-      { term: '～といわれております', reading: '～といわれております', meaning: '据说……、一般认为……', note: '比「いわれています」更郑重，放在轻松口语中略带戏谑感。' },
     ],
     grammar: [
     ],
