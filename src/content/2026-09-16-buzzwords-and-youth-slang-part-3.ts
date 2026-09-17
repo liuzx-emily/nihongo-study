@@ -125,7 +125,6 @@ export const part3Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～ぶりに',
-        connection: '表示时间长度的名词＋ぶりに',
         meaning: '时隔……再次……',
         example: '阪神タイガースが何十年ぶりにリーグ優勝しました。',
       },
@@ -183,19 +182,16 @@ export const part3Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～たとしても',
-        connection: '动词た形＋としても',
         meaning: '即使假设……也……；承认一个假设后说明结论仍不改变',
         example: '東京のチームのスローガンが「あれ」だったとしても、流行語にならなかったと思います。',
       },
       {
         pattern: '～っていうぐらい',
-        connection: '普通形／引用内容＋っていうぐらい',
         meaning: '到了可以说……的程度；足以形容为……',
         example: '阪神の話をしておけば間違いないっていうぐらい、人気があります。',
       },
       {
         pattern: '～じゃねえや',
-        connection: '名词／普通形＋じゃねえや',
         meaning: '不对，不是……；说话途中立刻否定并修正自己',
         example: 'ランニングじゃねえや、マラソン選手みたいな人です。',
       },
@@ -253,13 +249,11 @@ export const part3Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～してまう',
-        connection: '动词て形＋しまう → てまう（关西方言中的口语缩约）',
         meaning: '就要……了／竟然会……；这里带着兴奋和难以置信的语气',
         example: 'あかん、阪神優勝してまう。',
       },
       {
         pattern: 'このままだと',
-        connection: 'このまま＋だと＋结果',
         meaning: '照这样下去的话……；按当前状态发展就会……',
         example: 'このままだと阪神が優勝するぞ。',
       },
@@ -316,7 +310,6 @@ export const part3Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～ではなかったりする',
-        connection: '名词＋ではなかったりする／ナ形容词词干＋ではなかったりする',
         meaning: '有时并不是……；以留有余地的方式指出并非总是如此',
         example: '勝つために必要なものは、強さではなかったりするんですよ。',
       },
@@ -365,7 +358,6 @@ export const part3Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～かなんか',
-        connection: '名词／疑问词＋かなんか',
         meaning: '……还是什么；说话人记忆不确定时给出模糊例示',
         example: 'フランスかなんかのワールドカップだったと思います。',
       },

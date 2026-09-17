@@ -30,19 +30,16 @@ const sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～っていうこともあって',
-        connection: '普通形＋っていうこともあって',
         meaning: '也因为有……这一情况；考虑到……这个因素',
         example: '桜の季節っていうこともあって、いろんな人が日本に行きました。',
       },
       {
         pattern: '～でいっぱい',
-        connection: '名詞＋でいっぱい',
         meaning: '充满……；满是……',
         example: '嬉しい気持ちでいっぱいの1か月でした。',
       },
       {
         pattern: '～ていると',
-        connection: '動詞て形＋いると',
         meaning: '在持续做……时，就会发现／出现……',
         example: 'Instagramを見ていると、いろんな人が桜を楽しんでいるのが分かります。',
       },
@@ -83,13 +80,11 @@ const sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: 'それこそ～だったりとか',
-        connection: 'それこそ＋名詞＋だったりとか',
         meaning: '比如就有……之类；以……等为具体例子',
         example: 'それこそ景色だったりとか、服とか、建物とかを挙げました。',
       },
       {
         pattern: '～が言うほど',
-        connection: '名詞＋が＋動詞辞書形＋ほど',
         meaning: '达到某人所说的程度；像某人说得那么……',
         example: '桜ってみんなが言うほど綺麗ですか。',
       },
@@ -124,19 +119,16 @@ const sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: 'っていうのも',
-        connection: '文＋っていうのも',
         meaning: '之所以这么说，是因为……；这是因为……',
         example: 'っていうのも、韓国の国の花について面白い話を聞いたんです。',
       },
       {
         pattern: 'どうして～かっていうと',
-        connection: '疑問詞を含む文＋かっていうと',
         meaning: '要说为什么……；说到……的原因',
         example: 'どうして国の花になっているかっていうと、長い間咲くからです。',
       },
       {
         pattern: '答えから言うと／言いますと',
-        connection: '名詞＋から言うと／から言いますと',
         meaning: '先从答案说起；先说结论的话',
         example: '面白い答えから言いますと、ひらがなの誕生が関係しています。',
       },

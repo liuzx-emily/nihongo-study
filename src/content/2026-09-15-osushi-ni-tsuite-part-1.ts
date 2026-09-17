@@ -41,7 +41,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '浸透する', reading: 'しんとうする', meaning: '渗透', note: '既可指液体渗入，也可引申为观念等逐渐深入。' },
     ],
     grammar: [
-      { pattern: '～うちに入らない', connection: '名词＋の／动词普通形＋うちに入らない', meaning: '算不上……；还不属于……之列', example: '14度なら、寒いうちに入らないと思う人もいます。' },
+      { pattern: '～うちに入らない', meaning: '算不上……；还不属于……之列', example: '14度なら、寒いうちに入らないと思う人もいます。' },
     ],
   },
   {
@@ -63,7 +63,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '今日この頃', reading: 'きょうこのごろ', meaning: '最近这些日子', note: '常用作略带书面或诙谐色彩的收束语。' },
     ],
     grammar: [
-      { pattern: '～てくれよ', connection: '动词て形＋くれ＋よ', meaning: '带感情地要求或鼓励对方“请……吧”', example: '喉を大切にして頑張ってくれよ。' },
+      { pattern: '～てくれよ', meaning: '带感情地要求或鼓励对方“请……吧”', example: '喉を大切にして頑張ってくれよ。' },
     ],
   },
   {
@@ -127,8 +127,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '一通', reading: 'いっつう', meaning: '一封', note: '用于数信件、邮件或听众来信。' },
     ],
     grammar: [
-      { pattern: '～たところ', connection: '动词た形＋ところ', meaning: '做了……之后，结果……', example: 'メッセージを募集したところ、何人かから届きました。' },
-      { pattern: '～てまいる', connection: '动词て形＋まいる', meaning: '「～てくる」的自谦或郑重表达', example: 'お便りコーナーの時間がやってまいりました。' },
+      { pattern: '～たところ', meaning: '做了……之后，结果……', example: 'メッセージを募集したところ、何人かから届きました。' },
+      { pattern: '～てまいる', meaning: '「～てくる」的自谦或郑重表达', example: 'お便りコーナーの時間がやってまいりました。' },
     ],
   },
   {
@@ -205,7 +205,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '同じ並びで', reading: 'おなじならびで', meaning: '并列在同一序列中；放在同一层次上', note: '这里把听播客与日常生活的固定时段并列。' },
     ],
     grammar: [
-      { pattern: '～と同じ並びで', connection: '名词＋と同じ並びで', meaning: '与……并列、处在同一序列中', example: '朝ご飯の時間と同じ並びで、ポッドキャストの時間があります。' },
+      { pattern: '～と同じ並びで', meaning: '与……并列、处在同一序列中', example: '朝ご飯の時間と同じ並びで、ポッドキャストの時間があります。' },
     ],
   },
 ]

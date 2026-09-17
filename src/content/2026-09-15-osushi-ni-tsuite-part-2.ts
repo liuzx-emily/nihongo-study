@@ -17,7 +17,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'ぽっと', meaning: '突然地、冷不丁地', note: '口语拟态词，此处形容一条评论忽然出现。' },
     ],
     grammar: [
-      { pattern: '～と思いきや', connection: '普通形＋と思いきや', meaning: '原以为……，没想到……', example: '昔からあるのかなと思いきや、今の形は江戸時代にできました。' },
+      { pattern: '～と思いきや', meaning: '原以为……，没想到……', example: '昔からあるのかなと思いきや、今の形は江戸時代にできました。' },
     ],
   },
   {
@@ -104,7 +104,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '江戸前寿司', reading: 'えどまえずし', meaning: '江户前寿司', note: '后文解释其名称来自江户前方的东京湾。' },
     ],
     grammar: [
-      { pattern: '～かと思いきや', connection: '普通形＋かと思いきや', meaning: '原以为……，却……', example: '昔からあるのかなと思いきや、江戸時代に今の形になりました。' },
+      { pattern: '～かと思いきや', meaning: '原以为……，却……', example: '昔からあるのかなと思いきや、江戸時代に今の形になりました。' },
     ],
   },
   {
@@ -128,7 +128,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '東京湾', reading: 'とうきょうわん', meaning: '东京湾', note: '「湾」指海湾。' },
     ],
     grammar: [
-      { pattern: 'その場所その場所で', connection: '名词重复＋で', meaning: '在各个……；每个……各自', example: 'その場所その場所でご当地グルメがあります。' },
+      { pattern: 'その場所その場所で', meaning: '在各个……；每个……各自', example: 'その場所その場所でご当地グルメがあります。' },
     ],
   },
   {
@@ -151,7 +151,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '漁場', reading: 'ぎょじょう', meaning: '渔场', note: '主播随即用「魚の取れる場所」作浅白解释。' },
     ],
     grammar: [
-      { pattern: '～までには', connection: '动词辞书形／名词＋までには', meaning: '到……之前；要达到……需……', example: '酸っぱい魚を食べるまでには時間がかかります。' },
+      { pattern: '～までには', meaning: '到……之前；要达到……需……', example: '酸っぱい魚を食べるまでには時間がかかります。' },
     ],
   },
   {
@@ -249,7 +249,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'プレスをかける', meaning: '施压、压制', note: '外来表达，对应前面的「押す」。' },
     ],
     grammar: [
-      { pattern: '～でいうと', connection: '名词＋でいうと', meaning: '若从……来说；说到……方面', example: 'それ以外のお寿司でいうと、ちらし寿司があります。' },
+      { pattern: '～でいうと', meaning: '若从……来说；说到……方面', example: 'それ以外のお寿司でいうと、ちらし寿司があります。' },
     ],
   },
   {
@@ -274,8 +274,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'ぺろっと', meaning: '轻巧地、薄薄地放上去的样子', note: '此处形象说明把鱼片搭在饭团上。' },
     ],
     grammar: [
-      { pattern: '～のもまた一つ', connection: '动词普通形＋のもまた一つ＋评价', meaning: '……也别有一种……；也是一种选择', example: '新幹線に乗りながら食べられるのも、これもまた一つ、おつですよね。' },
-      { pattern: '見た目的には', connection: '名词＋的＋には', meaning: '从外观上看；就视觉而言', example: '見た目的には一番シンプルです。' },
+      { pattern: '～のもまた一つ', meaning: '……也别有一种……；也是一种选择', example: '新幹線に乗りながら食べられるのも、これもまた一つ、おつですよね。' },
+      { pattern: '見た目的には', meaning: '从外观上看；就视觉而言', example: '見た目的には一番シンプルです。' },
     ],
   },
   {

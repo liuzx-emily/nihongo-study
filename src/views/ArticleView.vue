@@ -285,12 +285,12 @@ onBeforeUnmount(() => {
 
             <div v-if="section.grammar.length" class="data-table grammar-table">
               <div class="table-row table-head">
-                <span>语法</span><span>接续</span><span>含义与本段用法</span>
+                <span>语法</span><span>例句</span><span>含义</span>
               </div>
               <div v-for="(item, itemIndex) in section.grammar" :key="`${item.pattern}-${itemIndex}`" class="table-row" :class="{ editable: contentEditable }">
                 <span class="term-cell"><b lang="ja">{{ item.pattern }}</b></span>
-                <span>{{ item.connection }}</span>
-                <span><b>{{ item.meaning }}</b><small>{{ item.example }}</small></span>
+                <span lang="ja">{{ item.example }}</span>
+                <span>{{ item.meaning }}</span>
                 <button
                   v-if="contentEditable"
                   class="content-delete-button table-delete-button"

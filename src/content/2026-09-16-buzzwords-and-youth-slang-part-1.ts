@@ -51,7 +51,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '楽しみじゃねえ', reading: 'たのしみじゃねえ', meaning: '没什么好期待的', note: '「じゃない」的粗犷口语形式，语气随意。' },
     ],
     grammar: [
-      { pattern: '～てないで', connection: '动词て形＋いないで → 口语缩约「～てないで」', meaning: '别一直……，而要……', example: '恋人のいない自分に浸ってないで、ポジティブに行ってほしいと思うんですね。' },
+      { pattern: '～てないで', meaning: '别一直……，而要……', example: '恋人のいない自分に浸ってないで、ポジティブに行ってほしいと思うんですね。' },
     ],
   },
   {
@@ -96,8 +96,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '今の段階で', reading: 'いまのだんかいで', meaning: '在现阶段；在目前这个时候', note: '用于限定作出判断或采取行动的时间点。' },
     ],
     grammar: [
-      { pattern: '～たところ', connection: '动词た形＋ところ', meaning: '做了……之后，结果……', example: '支払えないんですけどっていうふうにお話をしたところ、「ここで払えるんですけど」と言われました。' },
-      { pattern: '～とかってなった時', connection: '普通形＋とか＋って＋なった時', meaning: '到了诸如需要……这样的情况时', example: '電話しなきゃいけないとかってなった時に、携帯電話を使えないのは困ります。' },
+      { pattern: '～たところ', meaning: '做了……之后，结果……', example: '支払えないんですけどっていうふうにお話をしたところ、「ここで払えるんですけど」と言われました。' },
+      { pattern: '～とかってなった時', meaning: '到了诸如需要……这样的情况时', example: '電話しなきゃいけないとかってなった時に、携帯電話を使えないのは困ります。' },
     ],
   },
   {
@@ -207,7 +207,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'それなりに', reading: 'それなりに', meaning: '相应地；还算；达到一定程度', note: '表示虽非顶级，但以其价格或档次来说表现尚可。' },
     ],
     grammar: [
-      { pattern: '～って言っても', connection: '名词／普通形＋って言っても', meaning: '虽说是……，但……', example: '安いって言っても2万円ですからね。' },
+      { pattern: '～って言っても', meaning: '虽说是……，但……', example: '安いって言っても2万円ですからね。' },
     ],
   },
   {

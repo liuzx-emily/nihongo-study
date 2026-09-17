@@ -135,7 +135,7 @@ button, input { font: inherit; }
 .table-head { background: #e8e1d5; }
 .data-table .table-row:not(.table-head):nth-child(odd) { background: #efebe3; }
 .vocabulary-table .table-row { grid-template-columns: 1.15fr 1fr 2fr; }
-.grammar-table .table-row { grid-template-columns: 1.15fr 1.1fr 2.4fr; }
+.grammar-table .table-row { grid-template-columns: 1.15fr 2.4fr 2fr; }
 .vocabulary-table .table-row.editable,
 .grammar-table .table-row.editable { position: relative; }
 .vocabulary-table .table-row.editable > span:last-of-type,
@@ -145,7 +145,6 @@ button, input { font: inherit; }
 .table-head > span { color: var(--muted); font-size: 13px; letter-spacing: .1em; padding-top: 6px; padding-bottom: 6px; }
 .term-cell b { display: inline; font: 600 15px var(--serif); }
 .term-cell small { display: inline; margin-left: 10px; color: var(--muted); font-size: 13px; line-height: 1.65; }
-.grammar-table small { display: block; color: var(--muted); margin-top: 4px; font-size: 13px; line-height: 1.65; }
 .content-delete-error { margin: 0 0 10px; padding: 8px 11px; border-left: 3px solid var(--danger); background: rgba(179,59,46,.07); color: #7e2b22; font-size: 12px; line-height: 1.5; }
 .content-delete-button { display: grid; width: 17px; min-width: 17px; height: 17px; padding: 0; place-items: center; border: 1px solid transparent; background: transparent; color: var(--danger); cursor: pointer; font-size: 12px; white-space: nowrap; }
 .content-delete-button:hover { background: rgba(179,59,46,.08); }

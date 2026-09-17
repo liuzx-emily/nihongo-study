@@ -23,7 +23,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'オタク', meaning: '御宅族；某一领域的狂热爱好者', note: '说话人先用大众常见的“动画爱好者”印象来说明，随后补充实际含义并不只限于动画。' },
     ],
     grammar: [
-      { pattern: 'その名も～', connection: 'その名も＋名称', meaning: '用于揭晓名称，相当于“其名为……”', example: 'その名も「オタクの名言」です。' },
+      { pattern: 'その名も～', meaning: '用于揭晓名称，相当于“其名为……”', example: 'その名も「オタクの名言」です。' },
     ],
   },
   {
@@ -53,8 +53,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '自体', reading: 'じたい', meaning: '本身', note: '接在名词后强调该事物自身，此处强调“日语句子本身”。' },
     ],
     grammar: [
-      { pattern: '～なんて', connection: '名词／普通形＋なんて', meaning: '表示轻视、意外或举例；此处表现“漫画、动画不过如此”的轻视态度', example: 'アニメなんて、そんな子供が見るもんでしょ。' },
-      { pattern: '～もんだろう', connection: '普通形＋ものだろう（口语：もんだろう）', meaning: '带有理所当然判断的口语说法，“不就是……的东西吗”', example: '漫画、アニメ、ちょっとこれ子供のもんだろうって思ってる人。' },
+      { pattern: '～なんて', meaning: '表示轻视、意外或举例；此处表现“漫画、动画不过如此”的轻视态度', example: 'アニメなんて、そんな子供が見るもんでしょ。' },
+      { pattern: '～もんだろう', meaning: '带有理所当然判断的口语说法，“不就是……的东西吗”', example: '漫画、アニメ、ちょっとこれ子供のもんだろうって思ってる人。' },
     ],
   },
   {
@@ -85,7 +85,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '猛毒', reading: 'もうどく', meaning: '剧毒', note: '毒性极强的毒。' },
     ],
     grammar: [
-      { pattern: '～と言っても過言ではない', connection: '普通形＋と言っても過言ではない', meaning: '即使说……也不为过', example: '僕の人生のスローガンって言っても過言ではないぐらい、大切なフレーズでございます。' },
+      { pattern: '～と言っても過言ではない', meaning: '即使说……也不为过', example: '僕の人生のスローガンって言っても過言ではないぐらい、大切なフレーズでございます。' },
     ],
   },
   {
@@ -115,8 +115,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '終わってる', reading: 'おわってる', meaning: '没救了；糟透了', note: '「終わっている」的口语缩约，表示状态非常糟糕。' },
     ],
     grammar: [
-      { pattern: '～さえ～ば', connection: '名词＋さえ＋条件形', meaning: '只要……就……，突出最低且充分的条件', example: '覚えてくれている人さえいれば、人は死なない。' },
-      { pattern: '～的には', connection: '人物／立场＋的には', meaning: '从……的角度或立场来看；较口语化', example: 'Dr.ヒルルクさん的には違うんだと。' },
+      { pattern: '～さえ～ば', meaning: '只要……就……，突出最低且充分的条件', example: '覚えてくれている人さえいれば、人は死なない。' },
+      { pattern: '～的には', meaning: '从……的角度或立场来看；较口语化', example: 'Dr.ヒルルクさん的には違うんだと。' },
     ],
   },
   {
@@ -147,7 +147,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '衝撃を受ける', reading: 'しょうげきをうける', meaning: '受到冲击', note: '既可指物理冲击，也可指心理上受到强烈震动。' },
     ],
     grammar: [
-      { pattern: '～ことで', connection: '动词辞书形＋ことで', meaning: '通过……；借由……', example: '自分がお医者さんをコントロールすることで、国の人は僕の言うことを聞いてくれるだろう。' },
+      { pattern: '～ことで', meaning: '通过……；借由……', example: '自分がお医者さんをコントロールすることで、国の人は僕の言うことを聞いてくれるだろう。' },
     ],
   },
   {
@@ -177,7 +177,7 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '二度と', reading: 'にどと', meaning: '再也（不）', note: '通常与否定表达搭配，强调某事不会再次发生。' },
     ],
     grammar: [
-      { pattern: '～ってさ', connection: '名词／普通形＋ってさ', meaning: '把某事作为话题提出，并带有随意、亲近的口语语气', example: '何か死ぬってさ、小学生の中で、まあそういう存在自体は知ってるとね。' },
+      { pattern: '～ってさ', meaning: '把某事作为话题提出，并带有随意、亲近的口语语气', example: '何か死ぬってさ、小学生の中で、まあそういう存在自体は知ってるとね。' },
     ],
   },
   {
@@ -207,8 +207,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '心の中に残る', reading: 'こころのなかにのこる', meaning: '留在心中', note: '指被他人长久记住。' },
     ],
     grammar: [
-      { pattern: 'であれば', connection: '名词／ナ形容词词干＋であれば；也可承接前文判断', meaning: '如果是这样；既然如此', example: 'であれば、僕が目指すところは、健康に気をつけて90歳まで生きることではなく、いろんな人の心の中に残ることです。' },
-      { pattern: '～ではなく', connection: '名词／ナ形容词词干＋ではなく', meaning: '不是……而是……；先否定一个选项，再引出真正重视的内容', example: '90歳まで生きることではなく、いろんな人の心の中に残る。' },
+      { pattern: 'であれば', meaning: '如果是这样；既然如此', example: 'であれば、僕が目指すところは、健康に気をつけて90歳まで生きることではなく、いろんな人の心の中に残ることです。' },
+      { pattern: '～ではなく', meaning: '不是……而是……；先否定一个选项，再引出真正重视的内容', example: '90歳まで生きることではなく、いろんな人の心の中に残る。' },
     ],
   },
   {
@@ -238,8 +238,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'いい意味で', reading: 'いいいみで', meaning: '从好的意义上说', note: '用于限定“让人忘不了”，避免被理解成负面意义。' },
     ],
     grammar: [
-      { pattern: '～だけでいいのか', connection: '普通形／名词＋だけでいいのか', meaning: '难道只……就够了吗；对现状是否充分提出质疑', example: 'まあそれだけでいいのかと。' },
-      { pattern: '～べき', connection: '动词辞书形＋べき（する也可用すべき）', meaning: '应该……；表示说话人认为值得追求的目标', example: 'それを目指すべきなんじゃないか。' },
+      { pattern: '～だけでいいのか', meaning: '难道只……就够了吗；对现状是否充分提出质疑', example: 'まあそれだけでいいのかと。' },
+      { pattern: '～べき', meaning: '应该……；表示说话人认为值得追求的目标', example: 'それを目指すべきなんじゃないか。' },
     ],
   },
 ]

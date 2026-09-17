@@ -23,8 +23,8 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '共感する', reading: 'きょうかんする', meaning: '产生共鸣；感同身受', note: '常与「～に共感する」搭配。' },
     ],
     grammar: [
-      { pattern: '～かのように', connection: '普通形＋かのように', meaning: '仿佛……一样；实际未必如此，却有那样的感受或表现', example: '自分も彼女と同じ運命を歩んでいるかのように思える。' },
-      { pattern: '～ながらも', connection: '动词ます形去ます＋ながらも／形容词普通形＋ながらも', meaning: '虽然……却……；比单纯的「ながら」更明确地表示逆接', example: 'かわいそうだなと思いながらも、頑張ってほしいという気持ちになる。' },
+      { pattern: '～かのように', meaning: '仿佛……一样；实际未必如此，却有那样的感受或表现', example: '自分も彼女と同じ運命を歩んでいるかのように思える。' },
+      { pattern: '～ながらも', meaning: '虽然……却……；比单纯的「ながら」更明确地表示逆接', example: 'かわいそうだなと思いながらも、頑張ってほしいという気持ちになる。' },
     ],
   },
   {
@@ -46,9 +46,9 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'つなげる', reading: 'つなげる', meaning: '连接；联系起来', note: '此处指在叙述或观念上连接自然与人的命运。' },
     ],
     grammar: [
-      { pattern: '～なんて', connection: '名词／普通形＋なんて', meaning: '举出某事并附带轻视、惊讶或强调语气；此处强调这些事根本不由自己控制', example: '木の実が採れるか、魚が釣れるかなんて、自分ではコントロールできない。' },
-      { pattern: '～ことに成功する', connection: '动词辞书形＋ことに成功する', meaning: '成功做到……', example: '美しいものを言語化することに成功する。' },
-      { pattern: '疑问词＋かっていうと', connection: '疑问词构成的疑问句＋かっていうと', meaning: '说到……是什么／为什么；用于提出问题后自行说明', example: '何かっていうと、自然なんですね。' },
+      { pattern: '～なんて', meaning: '举出某事并附带轻视、惊讶或强调语气；此处强调这些事根本不由自己控制', example: '木の実が採れるか、魚が釣れるかなんて、自分ではコントロールできない。' },
+      { pattern: '～ことに成功する', meaning: '成功做到……', example: '美しいものを言語化することに成功する。' },
+      { pattern: '疑问词＋かっていうと', meaning: '说到……是什么／为什么；用于提出问题后自行说明', example: '何かっていうと、自然なんですね。' },
     ],
   },
   {
@@ -72,9 +72,9 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'めちゃくちゃ', reading: 'めちゃくちゃ', meaning: '非常；极其', note: '这里作口语程度副词，修饰「イケメン」。' },
     ],
     grammar: [
-      { pattern: 'どんなに～ても', connection: 'どんなに＋动词て形も／い形容词くても／な形容词でも', meaning: '无论多么……也……', example: 'どんなに光源氏に会いたくても、来てくれるとは限らない。' },
-      { pattern: '～から考えると', connection: '名词＋から考えると', meaning: '从……的角度或立场来看', example: '今から考えると、とんでもないですよね。' },
-      { pattern: '～とは限らない', connection: '普通形＋とは限らない', meaning: '未必……；不一定……', example: '会いたいと思っても、相手が来てくれるとは限らない。' },
+      { pattern: 'どんなに～ても', meaning: '无论多么……也……', example: 'どんなに光源氏に会いたくても、来てくれるとは限らない。' },
+      { pattern: '～から考えると', meaning: '从……的角度或立场来看', example: '今から考えると、とんでもないですよね。' },
+      { pattern: '～とは限らない', meaning: '未必……；不一定……', example: '会いたいと思っても、相手が来てくれるとは限らない。' },
     ],
   },
   {
@@ -94,9 +94,9 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '大変', reading: 'たいへん', meaning: '辛苦；不容易', note: '在对樱花说话的拟人语境中，表达对彼此处境的共感。' },
     ],
     grammar: [
-      { pattern: '～たら', connection: '动词た形＋ら', meaning: '一……就……；到了……之后出现某种情况', example: '秋になったら、葉っぱはすぐ落ちてしまう。' },
-      { pattern: '～かもしれない', connection: '普通形＋かもしれない', meaning: '也许……；表示可能性不确定', example: 'いつか春が来るかもしれない。' },
-      { pattern: '～なんて', connection: '名词＋なんて', meaning: '把对象作为话题提出，并带有轻视、自怜或强烈情绪', example: '誰も私のことなんて見てくれない。' },
+      { pattern: '～たら', meaning: '一……就……；到了……之后出现某种情况', example: '秋になったら、葉っぱはすぐ落ちてしまう。' },
+      { pattern: '～かもしれない', meaning: '也许……；表示可能性不确定', example: 'いつか春が来るかもしれない。' },
+      { pattern: '～なんて', meaning: '把对象作为话题提出，并带有轻视、自怜或强烈情绪', example: '誰も私のことなんて見てくれない。' },
     ],
   },
   {
@@ -123,9 +123,9 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: 'それプラス', reading: 'それプラス', meaning: '除此之外；再加上', note: '较随意的口语连接，相当于「それに加えて」。' },
     ],
     grammar: [
-      { pattern: 'だからこそ', connection: '句子＋だからこそ', meaning: '正因为如此才……；用「こそ」强调该原因恰恰导向后项', example: '美しい時は一瞬で終わる。だからこそ美しいんだ。' },
-      { pattern: '～の中に…を見いだす', connection: '名词＋の中に＋名词＋を見いだす', meaning: '在……之中发现／看出……', example: '自然の中に自分の人生の運命を見いだす。' },
-      { pattern: '～からこそ', connection: '普通形＋からこそ', meaning: '正因为……才……；突出不可替代的原因', example: '桜に同じ気持ちになれるからこそ、桜を美しいと感じる。' },
+      { pattern: 'だからこそ', meaning: '正因为如此才……；用「こそ」强调该原因恰恰导向后项', example: '美しい時は一瞬で終わる。だからこそ美しいんだ。' },
+      { pattern: '～の中に…を見いだす', meaning: '在……之中发现／看出……', example: '自然の中に自分の人生の運命を見いだす。' },
+      { pattern: '～からこそ', meaning: '正因为……才……；突出不可替代的原因', example: '桜に同じ気持ちになれるからこそ、桜を美しいと感じる。' },
     ],
   },
 ]

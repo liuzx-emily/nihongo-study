@@ -11,7 +11,7 @@ const teachingContent: TeachingContent[] = [
       { term: 'もたらす', meaning: '带来、造成', note: '本段指信长把新观念带到日本。' },
     ],
     grammar: [
-      { pattern: '～なんて思われていなかった', connection: '普通形＋なんて＋思われていなかった', meaning: '当时根本没人认为会……；「なんて」突出出乎预料', example: '絶対優勝するなんて思われていなかった。' },
+      { pattern: '～なんて思われていなかった', meaning: '当时根本没人认为会……；「なんて」突出出乎预料', example: '絶対優勝するなんて思われていなかった。' },
     ],
   },
   {
@@ -22,7 +22,7 @@ const teachingContent: TeachingContent[] = [
       { term: '火を放つ', reading: 'ひをはなつ', meaning: '放火、纵火', note: '比「火をつける」更常用于战争或案件叙述。' },
     ],
     grammar: [
-      { pattern: '～と思ってくれたらいい', connection: '普通形＋と思ってくれたらいい', meaning: '你可以把它理解成……；请听者暂且采用某种理解', example: 'そんな雰囲気の仏教だと思ってくれたらいいと思います。' },
+      { pattern: '～と思ってくれたらいい', meaning: '你可以把它理解成……；请听者暂且采用某种理解', example: 'そんな雰囲気の仏教だと思ってくれたらいいと思います。' },
     ],
   },
   {
@@ -33,7 +33,7 @@ const teachingContent: TeachingContent[] = [
       { term: '個人の自由', reading: 'こじんのじゆう', meaning: '个人自由', note: '本段指最终如何理解历史由个人自行判断。' },
     ],
     grammar: [
-      { pattern: '～なんて、なんて～', connection: '普通形＋なんて＋评价', meaning: '竟然做……，真是……；以惊讶或谴责评价行为', example: '子供や女の人を殺すなんて、なんてひでえやつだ。' },
+      { pattern: '～なんて、なんて～', meaning: '竟然做……，真是……；以惊讶或谴责评价行为', example: '子供や女の人を殺すなんて、なんてひでえやつだ。' },
     ],
   },
   {
@@ -44,7 +44,7 @@ const teachingContent: TeachingContent[] = [
       { term: 'タイムスリップ', meaning: '穿越时空', note: '用现代技术回到过去的假设说明知识垄断。' },
     ],
     grammar: [
-      { pattern: '～ないわけがない', connection: '动词ない形＋わけがない', meaning: '不可能不……；按条件推断必然会……', example: 'その状態で、お金が稼げないわけがない。' },
+      { pattern: '～ないわけがない', meaning: '不可能不……；按条件推断必然会……', example: 'その状態で、お金が稼げないわけがない。' },
     ],
   },
   {
@@ -55,7 +55,7 @@ const teachingContent: TeachingContent[] = [
       { term: 'がっぽがっぽ', meaning: '财源滚滚、大把进钱', note: '形象表示钱持续大量流入，口语色彩很强。' },
     ],
     grammar: [
-      { pattern: '～てでも', connection: '动词て形＋でも', meaning: '即使付出某种代价仍然……', example: '70％のコミッションを払ってでも、たぶん結構お金は稼げます。' },
+      { pattern: '～てでも', meaning: '即使付出某种代价仍然……', example: '70％のコミッションを払ってでも、たぶん結構お金は稼げます。' },
     ],
   },
   {
@@ -66,7 +66,7 @@ const teachingContent: TeachingContent[] = [
       { term: '権力', reading: 'けんりょく', meaning: '权力', note: '指足以影响将军、天皇和贵族决策的力量。' },
     ],
     grammar: [
-      { pattern: 'そうなると～わけだ', connection: 'そうなると＋结果＋わけだ', meaning: '这样一来，自然就会得出……结果', example: 'そうなると、権力が手に入るわけなんですよね。' },
+      { pattern: 'そうなると～わけだ', meaning: '这样一来，自然就会得出……结果', example: 'そうなると、権力が手に入るわけなんですよね。' },
     ],
   },
   {
@@ -77,7 +77,7 @@ const teachingContent: TeachingContent[] = [
       { term: '田舎者', reading: 'いなかもの', meaning: '乡巴佬、乡下人', note: '带轻蔑色彩；这里是主播替朝仓一方拟出的台词。' },
     ],
     grammar: [
-      { pattern: '～てたまるか', connection: '动词て形＋たまるか', meaning: '怎么能让……；绝不能容许……', example: '岐阜の田舎者なんかに天下を取られてたまるか。' },
+      { pattern: '～てたまるか', meaning: '怎么能让……；绝不能容许……', example: '岐阜の田舎者なんかに天下を取られてたまるか。' },
     ],
   },
   {
@@ -88,7 +88,7 @@ const teachingContent: TeachingContent[] = [
       { term: '姉川の戦い', reading: 'あねがわのたたかい', meaning: '姊川之战', note: '本段中信长战胜朝仓、浅井联军的战役。' },
     ],
     grammar: [
-      { pattern: '～やがる', connection: '动词ます形去ます＋やがる', meaning: '竟敢……；以粗鲁口气表达愤怒或轻蔑', example: 'あの野郎、裏切りやがって。' },
+      { pattern: '～やがる', meaning: '竟敢……；以粗鲁口气表达愤怒或轻蔑', example: 'あの野郎、裏切りやがって。' },
     ],
   },
   {
@@ -99,7 +99,7 @@ const teachingContent: TeachingContent[] = [
       { term: 'もやもやする', meaning: '纠结、难以释怀', note: '指疑问或情绪无法得到清楚解决。' },
     ],
     grammar: [
-      { pattern: '～たものだ／～たもんだ', connection: '动词た形＋ものだ（口语：もんだ）', meaning: '真是处于……境地；本句表达被轻视后的感叹', example: '俺もなめられたもんだ。' },
+      { pattern: '～たものだ／～たもんだ', meaning: '真是处于……境地；本句表达被轻视后的感叹', example: '俺もなめられたもんだ。' },
     ],
   },
   {
@@ -110,7 +110,7 @@ const teachingContent: TeachingContent[] = [
       { term: 'コントロール', meaning: '控制、管控', note: '本段指政治势力限制寺院权力和活动。' },
     ],
     grammar: [
-      { pattern: '～がために', connection: '动词た形／名词＋である＋がために', meaning: '正因为……而导致；多用于重大或不利结果', example: 'お金と権力と武力を持ってしまったがために、政治の中に入っていきました。' },
+      { pattern: '～がために', meaning: '正因为……而导致；多用于重大或不利结果', example: 'お金と権力と武力を持ってしまったがために、政治の中に入っていきました。' },
     ],
   },
   {
@@ -123,7 +123,7 @@ const teachingContent: TeachingContent[] = [
       { term: '連鎖', reading: 'れんさ', meaning: '连锁、连锁反应', note: '指怨恨和报复不断引发下一次报复。' },
     ],
     grammar: [
-      { pattern: '～んじゃないかっていう話もある', connection: '普通形＋んじゃないか＋っていう話もある', meaning: '也有“会不会是……”的说法；多层降低断言强度', example: '嘘の情報を流したんじゃないかっていう話もあるそうです。' },
+      { pattern: '～んじゃないかっていう話もある', meaning: '也有“会不会是……”的说法；多层降低断言强度', example: '嘘の情報を流したんじゃないかっていう話もあるそうです。' },
     ],
   },
   {
@@ -134,8 +134,8 @@ const teachingContent: TeachingContent[] = [
       { term: '調べがい', reading: 'しらべがい', meaning: '研究的价值', note: '「动词ます形＋がい」表示做某事值得。' },
     ],
     grammar: [
-      { pattern: '～やがる', connection: '动词ます形去ます＋やがる', meaning: '竟敢……；带愤怒或轻蔑', example: '俺が大事にしていたケーキ食べやがって。' },
-      { pattern: '～がいがある', connection: '动词ます形去ます＋がいがある', meaning: '值得……；做……有价值', example: '調べがいのある歴史の人物です。' },
+      { pattern: '～やがる', meaning: '竟敢……；带愤怒或轻蔑', example: '俺が大事にしていたケーキ食べやがって。' },
+      { pattern: '～がいがある', meaning: '值得……；做……有价值', example: '調べがいのある歴史の人物です。' },
     ],
   },
 ]

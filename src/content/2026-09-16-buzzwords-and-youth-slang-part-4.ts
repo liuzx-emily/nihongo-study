@@ -89,7 +89,6 @@ export const buzzwordsAndYouthSlangPart4Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～っていうぐらい',
-        connection: '普通形＋っていうぐらい',
         meaning: '举出一个足以说明程度的事例，相当于“甚至到了……的程度”',
         example: '有名なYouTuberもコラボをしたっていうぐらい流行りました。',
       },
@@ -134,13 +133,11 @@ export const buzzwordsAndYouthSlangPart4Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～たところ',
-        connection: '動詞た形＋ところ',
         meaning: '做了某事后，得到了后项所述的发现或结果',
         example: 'インターネットで調べたところ、盛り上げたい時に使うそうです。',
       },
       {
         pattern: '～のかなんて',
-        connection: '疑問節＋のか＋なんて',
         meaning: '用「なんて」把前面的疑问内容作为话题，并带出轻视、无从判断等语气',
         example: 'どういう感じで使えるのかなんて、全く分かんなかった。',
       },
@@ -199,7 +196,6 @@ export const buzzwordsAndYouthSlangPart4Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '数量＋ぐらいから下',
-        connection: '年齢などの数量＋ぐらいから下',
         meaning: '以某个大致数值为界，指该数值及更低的范围',
         example: '34、5歳ぐらいから下の世代は使うと思います。',
       },
@@ -254,13 +250,11 @@ export const buzzwordsAndYouthSlangPart4Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: '～であって',
-        connection: '名詞＋であって',
         meaning: '「である」的连接形式，用较郑重的语气确认前项性质，再承接后文',
         example: '「なぜ」は書く時に使う書き言葉であって、話す時には使わない。',
       },
       {
         pattern: '～てんな',
-        connection: '動詞て形＋いるんだな → ～てんな（口语缩约）',
         meaning: '带感叹或评价地说“原来很懂啊”；是非常随意的男性化口吻',
         example: 'この人、分かってんな。',
       },
@@ -348,7 +342,6 @@ export const buzzwordsAndYouthSlangPart4Sections: Omit<StudySection, 'id'>[] = [
     grammar: [
       {
         pattern: 'なんなら',
-        connection: '独立して文頭・文中に置く',
         meaning: '在当前提议或程度上再向前推进一步；这里相当于“甚至今天就能用”',
         example: '明日から、なんなら今日から使えます。',
       },

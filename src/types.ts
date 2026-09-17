@@ -7,7 +7,6 @@ export interface VocabularyItem {
 
 export interface GrammarItem {
   pattern: string
-  connection: string
   meaning: string
   example: string
 }
