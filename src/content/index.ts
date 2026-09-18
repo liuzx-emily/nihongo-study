@@ -1,4 +1,5 @@
 import type { StudyArticle } from '../types'
+import sandalMotherSavesTheWorld from './2026-09-18-sandal-mother-saves-the-world'
 import bestAnimeFilmInuOh from './2026-09-18-best-anime-film-inu-oh'
 import whereIsAMosquitoBiteItchiest from './2026-09-18-where-is-a-mosquito-bite-itchiest'
 import buzzwordsAndYouthSlang from './2026-09-16-buzzwords-and-youth-slang'
@@ -13,6 +14,7 @@ import odaNobunagaHieizan from './2026-09-14-oda-nobunaga-hieizan'
 import goodJapaneseLesson from './good-japanese-lesson'
 
 export const articles: StudyArticle[] = [
+  sandalMotherSavesTheWorld,
   bestAnimeFilmInuOh,
   whereIsAMosquitoBiteItchiest,
   buzzwordsAndYouthSlang,
