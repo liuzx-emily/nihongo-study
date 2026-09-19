@@ -1,4 +1,5 @@
 import type { StudyArticle } from '../types'
+import meaningOfYuyuName from './2026-09-19-meaning-of-yuyu-name'
 import highSchoolCakeFactory from './2026-09-18-high-school-cake-factory'
 import sandalMotherSavesTheWorld from './2026-09-18-sandal-mother-saves-the-world'
 import bestAnimeFilmInuOh from './2026-09-18-best-anime-film-inu-oh'
@@ -15,6 +16,7 @@ import odaNobunagaHieizan from './2026-09-14-oda-nobunaga-hieizan'
 import goodJapaneseLesson from './good-japanese-lesson'
 
 export const articles: StudyArticle[] = [
+  meaningOfYuyuName,
   highSchoolCakeFactory,
   sandalMotherSavesTheWorld,
   bestAnimeFilmInuOh,
