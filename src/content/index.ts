@@ -1,4 +1,5 @@
 import type { StudyArticle } from '../types'
+import japaneseListeningGestures from './2026-09-23-japanese-listening-gestures'
 import racismAndPositiveInterpretation from './2026-09-22-racism-and-positive-interpretation'
 import shittakaburiRakugo from './2026-09-22-shittakaburi-rakugo'
 import beginnerGrammarTop3 from './2026-09-19-beginner-grammar-top-3'
@@ -19,6 +20,7 @@ import odaNobunagaHieizan from './2026-09-14-oda-nobunaga-hieizan'
 import goodJapaneseLesson from './good-japanese-lesson'
 
 export const articles: StudyArticle[] = [
+  japaneseListeningGestures,
   racismAndPositiveInterpretation,
   shittakaburiRakugo,
   beginnerGrammarTop3,
