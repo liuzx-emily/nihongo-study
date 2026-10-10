@@ -21,7 +21,6 @@ const sections: Omit<StudySection, 'id'>[] = [
       { term: '古神道', reading: 'こしんとう', meaning: '古神道', note: '通常指佛教等外来思想传入前后、日本固有信仰的古老形态。' },
     ],
     grammar: [
-      { pattern: '～ではコントロールできない', meaning: '凭……无法做到；用「では」突出能力或立场上的限制。', example: '人間ではコントロールできないこと。' },
       { pattern: '～に神様を見る', meaning: '在某种对象之中看到、感受到某种意义或存在。', example: 'コントロールできないものに、こう、神様を見たわけなんですよ。' },
     ],
   },
